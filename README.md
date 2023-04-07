@@ -2,8 +2,8 @@
 
 ## 🔥 官方文档
 
-- [`package.json`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
-  > `package.json` 字段含义索引
+- [`package.json`字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+
 
 ## 🧐 待读...
 
