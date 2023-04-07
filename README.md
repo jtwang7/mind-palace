@@ -2,9 +2,9 @@
 
 ## 🔥 官方文档
 
-- [`package.json`字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
-- [`tsconfig.json`字段](https://www.typescriptlang.org/tsconfig)
-  - [`package.json : types/typings`](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
+- [package.json 字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
+  - [package.json : types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 
 
 ## 🧐 待读...
