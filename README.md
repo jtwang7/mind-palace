@@ -5,6 +5,9 @@
 - [package.json 字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
   - [package.json : types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
+- webpack
+  - [webpack plugins](https://webpack.js.org/plugins/)
+  - [webpack documentation](https://webpack.js.org/concepts/)
 
 
 ## 🧐 待读...
