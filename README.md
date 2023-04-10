@@ -3,6 +3,8 @@
 ## 🔥 官方文档
 
 - [package.json 字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+  - [exports](https://nodejs.org/api/packages.html#packages_exports)
+  - [imports](https://nodejs.org/api/packages.html#imports)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
   - [package.json : types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 - webpack
