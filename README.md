@@ -5,8 +5,8 @@
 - [RxJS](https://rxjs.dev/)
 - [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发`
 - [Rollup](https://rollupjs.org/)
-- [lodash](https://www.lodashjs.com/)
-- **webpack**
+- [Lodash](https://www.lodashjs.com/)
+- **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
 - **PixiJS**
