@@ -8,6 +8,9 @@
   - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
 - [RxJS](https://rxjs.dev/)
+- [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发`
+- [Rollup](https://rollupjs.org/)
+- [lodash](https://www.lodashjs.com/)
 - **webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
@@ -17,24 +20,20 @@
   - [ReactPixi](https://reactpixi.org/)
   
 ## ✨ 第三方库推荐
-
-- [lodash](https://www.lodashjs.com/)
 - [highlits.js](https://highlightjs.org/usage/) `代码高亮`
-- [Grid.js](https://gridjs.io/) `表格工具`
 - [classnames](https://github.com/JedWatson/classnames) `高效组合className的通用库`
-- [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发的工具，常用于构建私UI库`
-- [Rollup](https://rollupjs.org/) `打包工具`
+- [Grid.js](https://gridjs.io/) `表格工具`
 - [numbro.js](https://numbrojs.com/) `数字格式化`
 - [moment.js](https://momentjs.com/) `时间格式化`
-- [PapaParse](https://www.papaparse.com/) `前端解析 csv 的强力插件`
-- [hex-rgb](https://www.npmjs.com/package/hex-rgb) `颜色格式转换: hex <-> rgb`
-- [🎨AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
+- [PapaParse](https://www.papaparse.com/) `csv前端解析工具`
 - [RPG-Awesome](http://nagoshiashumari.github.io/Rpg-Awesome/) `科幻主题的免费矢量图标网站`
 - [Lorem Picsum](https://picsum.photos/) `图片占位`
-- [Neumorphism/Soft UI CSS](https://neumorphism.io/#55b9f3) `拟态按键CSS样式`
-- [react-color](https://github.com/casesandberg/react-color) `react颜色选择器`
-- [colormap](https://github.com/bpostlethwaite/colormap) `颜色条 - 获取连续过渡色数组`
-
+- **color**
+  - [AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
+  - [hex-rgb](https://www.npmjs.com/package/hex-rgb) `format: hex <=> rgb`
+  - [colormap](https://github.com/bpostlethwaite/colormap) `生成连续过渡色数组`
+  - [react-color](https://github.com/casesandberg/react-color) `react颜色选择器`
+  
 
 ## 🚀 好文推荐
 
