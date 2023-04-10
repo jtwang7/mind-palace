@@ -2,11 +2,6 @@
 
 ## 🔥 官方文档
 
-- [package.json 字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
-  - [exports](https://nodejs.org/api/packages.html#packages_exports)
-  - [imports](https://nodejs.org/api/packages.html#imports)
-  - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
-- [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
 - [RxJS](https://rxjs.dev/)
 - [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发`
 - [Rollup](https://rollupjs.org/)
@@ -18,6 +13,11 @@
   - [PixiJS](https://pixijs.com/)
   - [PixiJS tutorial](https://github.com/kittykatattack/learningPixi)
   - [ReactPixi](https://reactpixi.org/)
+- [package.json 字段](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+  - [exports](https://nodejs.org/api/packages.html#packages_exports)
+  - [imports](https://nodejs.org/api/packages.html#imports)
+  - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
+- [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
   
 ## ✨ 第三方库推荐
 - [highlits.js](https://highlightjs.org/usage/) `代码高亮`
