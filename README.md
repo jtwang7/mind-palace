@@ -10,6 +10,29 @@
 - webpack
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
+  
+## ✨ 第三方库推荐
+
+- [lodash](https://www.lodashjs.com/)
+- [RxJS](https://rxjs.dev/) `Reactive Extensions Library for JavaScript`
+- [highlits.js](https://highlightjs.org/usage/) `代码高亮`
+- [Grid.js](https://gridjs.io/) `表格工具`
+- [classnames](https://github.com/JedWatson/classnames) `高效组合className的通用库`
+- [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发的工具，常用于构建私UI库`
+- [Rollup](https://rollupjs.org/) `打包工具`
+- [numbro.js](https://numbrojs.com/) `数字格式化`
+- [moment.js](https://momentjs.com/) `时间格式化`
+- [PapaParse](https://www.papaparse.com/) `前端解析 csv 的强力插件`
+- [hex-rgb](https://www.npmjs.com/package/hex-rgb) `颜色格式转换: hex <-> rgb`
+- [🎨AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
+- **JavaScript 2d canvas library**
+  - [fabric.js](https://github.com/fabricjs/fabric.js)
+  - [konva.js](https://github.com/konvajs/konva)
+  - [zrender](https://github.com/ecomfe/zrender) `ECharts的底层渲染器`
+- **webgl 2d library**
+  - [PixiJS](https://pixijs.com/) `fastest,flexible 2D WebGL renderer`
+  - [PixiJS tutorial](https://github.com/kittykatattack/learningPixi) `Pixi.js 教程文档`
+  - [ReactPixi](https://reactpixi.org/) `PixiJS React 版本`
 
 
 ## 🧐 待读...
