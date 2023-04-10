@@ -7,14 +7,18 @@
   - [imports](https://nodejs.org/api/packages.html#imports)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
   - [package.json : types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
-- webpack
+- [RxJS](https://rxjs.dev/)
+- **webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
+- **PixiJS**
+  - [PixiJS](https://pixijs.com/)
+  - [PixiJS tutorial](https://github.com/kittykatattack/learningPixi)
+  - [ReactPixi](https://reactpixi.org/)
   
 ## ✨ 第三方库推荐
 
 - [lodash](https://www.lodashjs.com/)
-- [RxJS](https://rxjs.dev/) `Reactive Extensions Library for JavaScript`
 - [highlits.js](https://highlightjs.org/usage/) `代码高亮`
 - [Grid.js](https://gridjs.io/) `表格工具`
 - [classnames](https://github.com/JedWatson/classnames) `高效组合className的通用库`
@@ -25,15 +29,16 @@
 - [PapaParse](https://www.papaparse.com/) `前端解析 csv 的强力插件`
 - [hex-rgb](https://www.npmjs.com/package/hex-rgb) `颜色格式转换: hex <-> rgb`
 - [🎨AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
-- **JavaScript 2d canvas library**
-  - [fabric.js](https://github.com/fabricjs/fabric.js)
-  - [konva.js](https://github.com/konvajs/konva)
-  - [zrender](https://github.com/ecomfe/zrender) `ECharts的底层渲染器`
-- **webgl 2d library**
-  - [PixiJS](https://pixijs.com/) `fastest,flexible 2D WebGL renderer`
-  - [PixiJS tutorial](https://github.com/kittykatattack/learningPixi) `Pixi.js 教程文档`
-  - [ReactPixi](https://reactpixi.org/) `PixiJS React 版本`
+- [RPG-Awesome](http://nagoshiashumari.github.io/Rpg-Awesome/) `科幻主题的免费矢量图标网站`
+- [Lorem Picsum](https://picsum.photos/) `图片占位`
+- [Neumorphism/Soft UI CSS](https://neumorphism.io/#55b9f3) `拟态按键CSS样式`
+- [react-color](https://github.com/casesandberg/react-color) `react颜色选择器`
+- [colormap](https://github.com/bpostlethwaite/colormap) `颜色条 - 获取连续过渡色数组`
 
+
+## 🚀 好文推荐
+
+- [如何阅读大型前端开源项目的源码](https://juejin.cn/post/6844903607393845255)
 
 ## 🧐 待读...
 
