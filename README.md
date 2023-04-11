@@ -6,6 +6,8 @@
 - [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发`
 - [Rollup](https://rollupjs.org/)
 - [Lodash](https://www.lodashjs.com/)
+- **MDN**
+  - [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
