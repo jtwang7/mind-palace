@@ -30,6 +30,7 @@
 - [PapaParse](https://www.papaparse.com/) `csv前端解析工具`
 - [RPG-Awesome](http://nagoshiashumari.github.io/Rpg-Awesome/) `科幻主题的免费矢量图标网站`
 - [Lorem Picsum](https://picsum.photos/) `图片占位`
+- [fuse.js](https://fusejs.io/) `模糊检索`
 - **color**
   - [AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
   - [hex-rgb](https://www.npmjs.com/package/hex-rgb) `format: hex <=> rgb`
