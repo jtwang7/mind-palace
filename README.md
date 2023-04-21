@@ -50,3 +50,5 @@
 - [x] [使用 pnpm 构建 Monorepo 项目](https://zhuanlan.zhihu.com/p/373935751)
 - [x] [Yarn Workspaces: Organize Your Project’s Codebase Like A Pro](https://www.smashingmagazine.com/2019/07/yarn-workspaces-organize-project-codebase-pro/)
 - [x] [Yarn Workspace使用指南](https://juejin.cn/post/6974967455114362888)
+- [ ] [React.memo()](https://juejin.cn/post/6844904002652471309)
+- [ ] [useDeferredValue](https://juejin.cn/post/7083466010505773093)
