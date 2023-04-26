@@ -53,3 +53,4 @@
 - [x] [Yarn Workspace使用指南](https://juejin.cn/post/6974967455114362888)
 - [ ] [React.memo()](https://juejin.cn/post/6844904002652471309)
 - [ ] [useDeferredValue](https://juejin.cn/post/7083466010505773093)
+- [ ] [React页面：我不想帮组件管理它的状态](https://juejin.cn/post/6977397653654994975)
