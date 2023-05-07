@@ -119,6 +119,21 @@
 
 ## 深度配置
 
+- [webpack documentation](https://webpack.js.org/concepts/)
+
+小技巧：在使用 vscode 配置 webpack.{config}.js 时，可以在文件开头加上：
+
+```js
+const {Configuration} = require('webpack');
+/**
+ * @type {Configuration}
+ */
+```
+
+添加后 vscode 会在你配置 webpack 时自动给予代码提示。
+
+> 参考：[webpack配置项智能提示](https://joshuatz.com/posts/2020/vscode-intellisense-autocomplete-for-webpack-config-files/)
+
 ### entry / output
 
 - [entry](https://webpack.js.org/concepts/entry-points)
@@ -186,61 +201,11 @@ npm i @babel/preset-env core-js -D
 - `@babel/preset-env`: babel 编译的预设,可以转换目前最新的 js 标准语法。
 - `core-js`: 使用低版本 js 语法模拟高版本的库。
 
-
-
-
-```js
-npm i babel-loader @babel/core -D
-npm i @babel/preset-react @babel/preset-typescript -D
-npm i @babel/preset-env core-js -D
-npm i style-loader css-loader -D
-npm i less-loader less -D
-npm i html-webpack-plugin -D
-```
-
-- `html-webpack-plugin`: 向 webpack 提供将构建好的静态资源引入到一个 html 文件中的能力，使打包项目能在浏览器中运行。
-- `@babel/preset-react`: 由于 webpack 默认只能识别 js 文件,不能识别 jsx 语法，需要借助预设 [@babel/preset-react](https://link.juejin.cn/?target=https%3A%2F%2Fwww.babeljs.cn%2Fdocs%2Fbabel-preset-react) 来识别 jsx 语法，将其转为 js 文件。
-- `@babel/preset-typescript`: ts 语法转换为 js 语法。
-- `@babel/preset-env`: babel 编译的预设,可以转换目前最新的 js 标准语法。
-- `core-js`: 使用低版本 js 语法模拟高版本的库。
-- `style-loader`: 把解析后的 css 代码从 js 中抽离,放到头部的 style 标签中(在运行时做的)
-- `css-loader`: 解析 css 文件代码
-  - webpack 默认只识别 js,不识别 css 文件,需要使用 loader 来解析 css。
-- `less-loader`: 解析 less 文件代码,把 less 编译为 css
-  - 项目开发中为了更好的提升开发体验，一般会使用 css 超集 less 或者 scss，对于这些超集也需要对应的 loader 来识别解析。
-- `less`: less 核心
-
-### webpack.config.js 配置
-
-> 小技巧：在使用 vscode 配置 webpack.{config}.js 时，可以在文件开头加上：
->
-> ```js
-> const {Configuration} = require('webpack');
-> /**
->  * @type {Configuration}
->  */
-> ```
->
-> 添加后 vscode 会在你配置 webpack 时自动给予代码提示。
->
-> 参考：[webpack配置项智能提示](https://joshuatz.com/posts/2020/vscode-intellisense-autocomplete-for-webpack-config-files/)
-
 ```js
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  // --- ❇️ 编译访问入口 / 打包输出出口 ---
-  entry: path.join(__dirname, '../src/index.tsx'), //webpack 编译时访问的入口文件
-  //打包文件出口
-  output: {
-    filename: 'static/js/[name].js', //编译后输出的每个js文件名称
-    path: path.join(__dirname, '../dist'), //打包结果输出路径
-    clean: true, //打包前删除原有打包文件。webpack4需要配置clean-webpack-plugin；webpack5内置
-    publicPath: '/' //打包后文件的公共前缀路径
-  },
-  
-  // --- ❇️ loader ---
+  // --- loader ---
   module: {
     rules: [
       // --- babel-loader ---
@@ -252,36 +217,7 @@ module.exports = {
         use: 'babel-loader',
         // options: { ... }
       },
-      // --- 样式 ---
-      {
-        test: /.(css|less)$/, //匹配 css 文件
-        use: ['style-loader','css-loader', 'less-loader'] // 匹配到less文件后, 使用less-loader解析为css, 再用css-loader解析, 再借助style-loader把css解析结果插入到头部style标签中
-      }
     ]
-  }
-  
-  // --- ❇️ plugin ---
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../public/index.html'), // 模板取定义root节点的模板
-      inject: true, // 自动注入静态资源
-    })
-  ]
-  
-  // --- ❇️ 持久化缓存 ---
-  cache: {
-    type: 'filesystem', // 使用文件缓存
-  },
-  
-  // --- ❇️ 额外配置 ---
-  resolve: {
-    // @extensions: 在引入模块不带文件后缀时，遍历该配置数组元素，依次添加后缀查找文件。
-    // (注意把高频出现的文件后缀放在前面，减少查找次数。)
-    extensions: ['.js', '.tsx', '.ts'], 
-    // @alias: 配置路径别名
-    alias: {
-      '@': path.join(__dirname, '../src')
-    }
   }
 }
 ```
@@ -298,109 +234,75 @@ module.exports = {
 }
 ```
 
-## 配置环境变量
+#### style-loader / css-loader / less-loader 等样式 loader 配置
 
-环境变量按作用可分两种
+webpack 只能处理 js 文件，css-loader 等样式 loader 为 webpack 提供了处理 .css 后缀文件的能力。
 
-- 开发模式 or 打包构建模式
-
-  > 区分开发模式还是打包构建模式可以用 **process.env.NODE_ENV** 
-
-- 开发/测试/预测/正式环境
-
-  > 区分项目接口环境可以自定义一个环境变量**process.env.BASE_ENV** 
-
-自定义环境变量需要借助[cross-env](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcross-env)和[webpack.DefinePlugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.webpackjs.com%2Fplugins%2Fdefine-plugin%2F)来设置。
-
-- **cross-env**：兼容各系统的设置环境变量的包
-- **webpack.DefinePlugin**：**webpack**内置的插件,可以为业务代码注入环境变量
-
-1. 安装**cross-env**
-
-```sh
-npm i cross-env -D
+```js
+npm i style-loader css-loader -D
+npm i less-loader less -D
 ```
 
-2. 修改**package.json**的**scripts**脚本字段
+- `style-loader`: 把解析后的 css 代码从 js 中抽离,放到头部的 style 标签中(在运行时做的)
+- `css-loader`: 解析 css 文件代码
+  - webpack 默认只识别 js,不识别 css 文件,需要使用 loader 来解析 css。
+- `less-loader`: 解析 less 文件代码,把 less 编译为 css
+  - 项目开发中为了更好的提升开发体验，一般会使用 css 超集 less 或者 scss，对于这些超集也需要对应的 loader 来识别解析。
+- `less`: less 核心
 
-   **dev**开头是开发模式,**build**开头是打包模式,冒号后面对应的**dev**/**test**/**pre**/**prod**是对应的业务环境的**开发**/**测试**/**预测**/**正式**环境。
+```js
+const path = require('path')
 
-   ```js
-   "scripts": {
-     "dev:dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server -c build/webpack.dev.js",
-     "dev:test": "cross-env NODE_ENV=development BASE_ENV=test webpack-dev-server -c build/webpack.dev.js",
-     "dev:pre": "cross-env NODE_ENV=development BASE_ENV=pre webpack-dev-server -c build/webpack.dev.js",
-     "dev:prod": "cross-env NODE_ENV=development BASE_ENV=production webpack-dev-server -c build/webpack.dev.js",
-   
-     "build:dev": "cross-env NODE_ENV=production BASE_ENV=development webpack -c build/webpack.prod.js",
-     "build:test": "cross-env NODE_ENV=production BASE_ENV=test webpack -c build/webpack.prod.js",
-     "build:pre": "cross-env NODE_ENV=production BASE_ENV=pre webpack -c build/webpack.prod.js",
-     "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c build/webpack.prod.js",
-   }
-   ```
+module.exports = {
+  // --- loader ---
+  module: {
+    rules: [
+      // --- 样式 loader ---
+      {
+        test: /.(css|less)$/, //匹配 css 文件
+        use: ['style-loader','css-loader', 'less-loader'] // 匹配到less文件后, 使用less-loader解析为css, 再用css-loader解析, 再借助style-loader把css解析结果插入到头部style标签中
+      }
+    ]
+  }
+}
+```
 
-   > **process.env.NODE_ENV** 环境变量**webpack**会自动根据设置的**mode**字段来给业务代码注入对应的**development**和**prodction**。这里在命令中再次设置环境变量**NODE_ENV**是为了在**webpack**和**babel**的配置文件中访问到。
-   >
-   
-   执行**`npm run build:dev`**命令，表明当前是打包模式，业务环境是开发环境。
+### plugin
 
-3. 修改**webpack.base.js**
+- [webpack plugins](https://webpack.js.org/plugins/)
 
-   这里需要把**process.env.BASE_ENV**注入到业务代码里面, 业务代码中就可以通过访问该环境变量的接口地址获取其他数据,要借助**webpack.DefinePlugin**插件。
+#### html-webpack-plugin 配置
 
-   ```js
-   // webpack.base.js
-   // ...
-   const webpack = require('webpack')
-   module.export = {
-     // ...
-     plugins: [
-       // ...
-       new webpack.DefinePlugin({
-         'process.env.BASE_ENV': JSON.stringify(process.env.BASE_ENV)
-       })
-     ]
-   }
-   ```
+```js
+npm i html-webpack-plugin -D
+```
 
-   配置后会把值注入到业务代码里面去,**webpack**解析代码匹配到**process.env.BASE_ENV**,就会设置到对应的值。我们可以在业务代码中通过 `process.env.BASE_ENV` 访问到这个自定义的环境变量。
+- `html-webpack-plugin`: 向 webpack 提供将构建好的静态资源引入到一个 html 文件中的能力，使打包项目能在浏览器中运行。
 
-   可以通过以下代码测试一下，在**src/index.tsx**打印一下两个环境变量
+```js
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-   ```js
-   // src/index.tsx
-   // ...
-   console.log('NODE_ENV', process.env.NODE_ENV)
-   console.log('BASE_ENV', process.env.BASE_ENV)
-   ```
+module.exports = {
+  // --- ❇️ plugin ---
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../public/index.html'), // 模板取定义root节点的模板
+      inject: true, // 自动注入静态资源
+    })
+  ]
+}
+```
 
-   
-
-## 🔥 进阶
-
-**[webpack documentation](https://webpack.js.org/concepts/)**
-
-**[webpack plugins](https://webpack.js.org/plugins/)**
-
-
----
-
-
-
-**打包 css 样式至一个 .css 文件内**
+#### mini-css-extract-plugin & css-minimizer-webpack-plugin
 
 - [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin)
-
-  > 收集项目中 .css 文件并统一打包到一个 .css 文件中
-
+  > 抽离项目 js 文件中的 css 样式引入，并统一打包到一个 .css 文件中
 - [CssMinimizerWebpackPlugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/#root)
-
   > 优化和压缩 .css 文件
 
 webpack5 利用 **[MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin)** 插件打包 css 文件，利用  [CssMinimizerWebpackPlugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/#root) 插件压缩 .css 文件体积。
-
 > 由于 MiniCssExtractPlugin 建立在 webpack v5 的一个新功能之上，需要webpack 5才能工作。
->
 > webpack v4 及以下版本用户请用 extract-text-webpack-plugin 插件代替。
 
 ```js
@@ -411,7 +313,8 @@ yarn add -D mini-css-extract-plugin css-minimizer-webpack-plugin
 pnpm add -D mini-css-extract-plugin css-minimizer-webpack-plugin
 ```
 
-**mini-css-extract-plugin 通常和 css-loader 联用，首先对 css 进行解析，然后再通过插件打包。** 
+✅ mini-css-extract-plugin 通常和 css-loader 联用，首先对 css 进行解析，然后再通过插件打包。
+❌ style-loader 作用也是抽离 js 文件中的 css 样式，但它会将其注入到头文件 `<style />` 标签下，而不是单独生成 .css 文件。style-loader 与 mini-css0extract-plugin 两者功能冲突，mini-css0extract-plugin 会覆盖 style-loader 功能导致其失效，因此两者不能共用。
 
 最终 webpack.config.js 配置如下：
 
@@ -445,3 +348,100 @@ module.exports = {
   },
 };
 ```
+
+### 其他配置
+
+```js
+const path = require('path')
+
+module.exports = {
+  // --- ❇️ 持久化缓存 ---
+  cache: {
+    type: 'filesystem', // 使用文件缓存
+  },
+  
+  // --- ❇️ 额外配置 ---
+  resolve: {
+    // @extensions: 在引入模块不带文件后缀时，遍历该配置数组元素，依次添加后缀查找文件。
+    // (注意把高频出现的文件后缀放在前面，减少查找次数。)
+    extensions: ['.js', '.tsx', '.ts'], 
+    // @alias: 配置路径别名
+    alias: {
+      '@': path.join(__dirname, '../src')
+    }
+  }
+}
+```
+
+## 配置环境变量
+
+环境变量按作用可分两种
+
+- 开发模式 or 打包构建模式
+  > 区分开发模式还是打包构建模式可以用 **process.env.NODE_ENV** 
+- 开发/测试/预测/正式环境
+  > 区分项目接口环境可以自定义一个环境变量**process.env.BASE_ENV** 
+
+自定义环境变量需要借助[cross-env](https://link.juejin.cn?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcross-env)和[webpack.DefinePlugin](https://link.juejin.cn?target=https%3A%2F%2Fwww.webpackjs.com%2Fplugins%2Fdefine-plugin%2F)来设置。
+
+- **cross-env**：兼容各系统的设置环境变量的包
+- **webpack.DefinePlugin**：**webpack**内置的插件,可以为业务代码注入环境变量
+
+1. 安装**cross-env**
+
+    ```sh
+    npm i cross-env -D
+    ```
+
+2. 修改**package.json**的**scripts**脚本字段
+
+   **dev**开头是开发模式,**build**开头是打包模式,冒号后面对应的**dev**/**test**/**pre**/**prod**是对应的业务环境的**开发**/**测试**/**预测**/**正式**环境。
+
+   ```js
+   "scripts": {
+     "dev:dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server -c build/webpack.dev.js",
+     "dev:test": "cross-env NODE_ENV=development BASE_ENV=test webpack-dev-server -c build/webpack.dev.js",
+     "dev:pre": "cross-env NODE_ENV=development BASE_ENV=pre webpack-dev-server -c build/webpack.dev.js",
+     "dev:prod": "cross-env NODE_ENV=development BASE_ENV=production webpack-dev-server -c build/webpack.dev.js",
+   
+     "build:dev": "cross-env NODE_ENV=production BASE_ENV=development webpack -c build/webpack.prod.js",
+     "build:test": "cross-env NODE_ENV=production BASE_ENV=test webpack -c build/webpack.prod.js",
+     "build:pre": "cross-env NODE_ENV=production BASE_ENV=pre webpack -c build/webpack.prod.js",
+     "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c build/webpack.prod.js",
+   }
+   ```
+
+   > **process.env.NODE_ENV** 环境变量**webpack**会自动根据设置的**mode**字段来给业务代码注入对应的**development**和**prodction**。这里在命令中再次设置环境变量**NODE_ENV**是为了在**webpack**和**babel**的配置文件中访问到。
+   >
+
+   执行**`npm run build:dev`**命令，表明当前是打包模式，业务环境是开发环境。
+
+3. 修改**webpack.base.js**
+
+   这里需要把**process.env.BASE_ENV**注入到业务代码里面, 业务代码中就可以通过访问该环境变量的接口地址获取其他数据,要借助**webpack.DefinePlugin**插件。
+
+   ```js
+   // webpack.base.js
+   // ...
+   const webpack = require('webpack')
+   module.export = {
+     // ...
+     plugins: [
+       // ...
+       new webpack.DefinePlugin({
+         'process.env.BASE_ENV': JSON.stringify(process.env.BASE_ENV)
+       })
+     ]
+   }
+   ```
+
+   配置后会把值注入到业务代码里面去,**webpack**解析代码匹配到**process.env.BASE_ENV**,就会设置到对应的值。我们可以在业务代码中通过 `process.env.BASE_ENV` 访问到这个自定义的环境变量。
+
+   可以通过以下代码测试一下，在**src/index.tsx**打印一下两个环境变量
+
+   ```js
+   // src/index.tsx
+   // ...
+   console.log('NODE_ENV', process.env.NODE_ENV)
+   console.log('BASE_ENV', process.env.BASE_ENV)
+   ```
