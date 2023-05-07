@@ -79,6 +79,8 @@ tsconfig.json 作用：编译工具或命令行编译 `.ts` 文件时所需遵�
     "typeRoots": [], 
     // 加载的声明文件包
     "types": [], 
+    // 指定JSX代码生成用于的开发环境
+    "jsx": "react",
     // 删除注释 
     "removeComments":true, 
     // 不输出文件,即编译后不会生成任何文件

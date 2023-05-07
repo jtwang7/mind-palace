@@ -1,13 +1,5 @@
 # 从零搭建 React Monorepo 组件库
 
-## 目录
-
-- 基于 pnpm 的 Monorepo 环境搭建
-  - 初始化 pnpm workspace
-  - 创建 Monorepo 项目目录结构
-  - 附: Monorepo 中 pnpm 的常见命令
-- 搭建 React 组件库
-
 ## 基于 pnpm 的 Monorepo 环境搭建
 
 参考文章:
@@ -84,12 +76,30 @@ pnpm init
 参考文章：[Creating a React Component Library using Rollup, Typescript, Sass and Storybook](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
 
 项目搭建介绍：
+
 - 项目路径: `packages/aurora-design`
 - 打包工具: rollup
 - 组件开发工具: storybook
 - 主要技术栈: react + react-dom + typescript
 
+### 前期准备
+
+进入 `packages/aurora-design` 目录，运行如下命令：
+
+```js
+// 生成 package.json
+pnpm init
+// 生成 tsconfig.json
+tsc --init
+// 添加主要依赖
+pnpm add react react-dom
+pnpm add @types/react -D
+pnpm dlx storybook@latest init
+```
+
 ### package.json
+
+参照 [antd4.x-stable package.json](https://github.com/ant-design/ant-design/blob/4.x-stable/package.json)
 
 ```js
 {
@@ -97,14 +107,15 @@ pnpm init
   "version": "1.0.0",
   "description": "Aurora Design React UI Library.",
   "type": "module",
+  // esm 模块访问入口
   "module": "dist/es/index.js",
+  // cjs 模块访问入口
   "main": "dist/lib/index.js",
+  // 声明文件访问入口
   "typings": "dist/es/index.d.ts",
-  "files": [
-    "dist",
-    "es",
-    "lib"
-  ],
+  // 需要发布的文件
+  "files": ["dist"],
+  // 脚本
   "scripts": {
     "build": "rimraf dist/* && rollup -c",
     "storybook": "storybook dev -p 6006",
@@ -119,10 +130,12 @@ pnpm init
   ],
   "author": "jtwang7",
   "license": "ISC",
+  // 🔥使用组件库的宿主通常包含 react 和 react-dom，因此将依赖放在 peerDependencies 中，不安装。
   "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
+  // 🔥开发环境下的依赖
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
     "@rollup/plugin-commonjs": "^24.1.0",
@@ -137,8 +150,6 @@ pnpm init
     "@types/react": "^18.2.6",
     "less": "^4.1.3",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "rollup": "^3.21.5",
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -146,6 +157,10 @@ pnpm init
     "rollup-plugin-typescript2": "^0.34.1",
     "storybook": "^7.0.9"
   },
+  // 🔥tree-shaking忽略项
+  // 宿主环境调用组件库时，会 tree-shaking 掉未被真实引用(关联)的代码。
+  // 组件库中组件的样式 "import xxx.css" 会被识别为未被引用(导入的内容没有在项目中被显式调用)，因此会被宿主编译器在编译阶段移除。
+  // 指定 package.json sideEffects 可以在宿主编译器调用组件库 npm 包、访问 package.json 时，告知编译器禁止 tree-shaking sideEffects 中包含的引用路径，防止样式导入丢失。
   "sideEffects": [
     "dist/*",
     "es/**/style/*",
@@ -156,5 +171,39 @@ pnpm init
 ```
 
 ### tsconfig.json
+
+参照 [antd4.x-stable tsconfig.json](https://github.com/ant-design/ant-design/blob/4.x-stable/tsconfig.json)
+
+```js
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    // 别名配置
+    "paths": {
+      "aurora": ["components/index.tsx"],
+      "aurora/es/*": ["components/*"],
+      "aurora/lib/*": ["components/*"]
+    },
+    "strictNullChecks": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["dom", "es2017"],
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "declaration": true,
+    "declarationDir": "dist/es/types"
+  },
+  "exclude": ["node_modules", "lib", "es"]
+}
+```
 
 ### rollup.config.js
