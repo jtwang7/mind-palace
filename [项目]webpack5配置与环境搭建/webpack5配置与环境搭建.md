@@ -173,7 +173,7 @@ module.exports = {
 #### babel-loader 配置
 
 babel-loader 用于将高版本的 js 代码转化为兼容低版本的 js 代码。除此之外，依赖 babel 插件可以拓展 babel 的语法转换功能。
-关于 babel 的具体概念，可以参考 [What is babel?]('../[项目]What is babel?/What is babel?.md') 这篇文章。
+关于 babel 的具体概念，可以参考 [What is babel?](https://github.com/jtwang7/mind-palace/blob/main/%5B%E9%A1%B9%E7%9B%AE%5DWhat%20is%20babel%3F/What%20is%20babel%3F.md) 这篇文章。
 
 ```js
 npm i babel-loader @babel/core -D
