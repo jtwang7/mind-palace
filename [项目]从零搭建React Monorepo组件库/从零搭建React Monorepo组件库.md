@@ -87,16 +87,6 @@ pnpm init
 
 ### package.json
 
-package.json 描述了项目的具体信息，脚本配置，项目依赖等。有以下几项关键配置：
-
-- name: 项目发布在 npm 上的包名
-- version: 版本号
-- type: 文件默认的模块类型 (commonjs / module)
-- module: ESM 模块下的项目访问入口文件
-- main: CJS 模块下的项目访问入口文件
-- typings: 类型声明文件的访问入口文件
-- files: npm 发包导出
-
 ```json
 {
   "name": "aurora-design",
