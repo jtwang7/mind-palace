@@ -4,7 +4,7 @@
 
 - [掌握 tsconfig.json](https://juejin.cn/post/6844904178234458120//heading-13)
 
-## 目录
+## 介绍
 
 tsconfig.json 顶层属性：
 
@@ -17,7 +17,12 @@ tsconfig.json 顶层属性：
 - references
 - typeAcquisition
 
-tsconfig.json 作用：编译工具或命令行编译 `.ts` 文件时所需遵循的配置文件。
+tsconfig.json 作用：
+
+- 编译工具或命令行编译 `.ts(x)` 文件时所需遵循的配置文件。
+- 外部编译环境编译本项目的 `.ts(x)` 文件时，会依据 tsconfig.json 配置项对项目进行解析。
+
+> 可以将 tsconfig.json 看作是编译器解析 ts => js 所参照的说明书。
 
 ## 顶层属性介绍及使用场景
 
@@ -79,7 +84,7 @@ tsconfig.json 作用：编译工具或命令行编译 `.ts` 文件时所需遵�
     "typeRoots": [], 
     // 加载的声明文件包
     "types": [], 
-    // 指定JSX代码生成用于的开发环境
+    // 🔥指定JSX代码生成用于的开发环境
     "jsx": "react",
     // 删除注释 
     "removeComments":true, 

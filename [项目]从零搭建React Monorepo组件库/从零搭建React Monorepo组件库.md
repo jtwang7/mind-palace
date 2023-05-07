@@ -73,12 +73,15 @@ pnpm init
 
 ## 搭建 React 组件库
 
-参考文章：[Creating a React Component Library using Rollup, Typescript, Sass and Storybook](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
+参考文章：
+
+- [Creating a React Component Library using Rollup, Typescript, Sass and Storybook](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
+- [Creating a Reusable Component Library with React, Storybook, and Webpack](https://levelup.gitconnected.com/creating-a-reusable-component-library-with-react-storybook-and-webpack-c0a30076aa54)
 
 项目搭建介绍：
 
 - 项目路径: `packages/aurora-design`
-- 打包工具: rollup
+- 打包工具: rollup / webpack / ...
 - 组件开发工具: storybook
 - 主要技术栈: react + react-dom + typescript
 
@@ -106,15 +109,14 @@ pnpm dlx storybook@latest init
   "name": "aurora-design",
   "version": "1.0.0",
   "description": "Aurora Design React UI Library.",
-  "type": "module",
   // esm 模块访问入口
-  "module": "dist/es/index.js",
+  "module": "es/index.js",
   // cjs 模块访问入口
-  "main": "dist/lib/index.js",
+  "main": "lib/index.js",
   // 声明文件访问入口
-  "typings": "dist/es/index.d.ts",
+  "typings": "es/types/index.d.ts",
   // 需要发布的文件
-  "files": ["dist"],
+  "files": ["es", "lib"],
   // 脚本
   "scripts": {
     "build": "rimraf dist/* && rollup -c",
@@ -170,6 +172,14 @@ pnpm dlx storybook@latest init
 }
 ```
 
+**注意**
+
+- 通过 "main", "module" 等字段定义不同规范的入口文件位置。
+- 通过 "typings" 字段定义声明文件的入口。
+- 将 react, react-dom 依赖放在 peerDependencies 中。
+- 将打包输出的文件路径放入 files 字段中，跟随 npm 发布。
+- 将样式文件路径定义到 sideEffects 中，避免被 tree-shaking。
+
 ### tsconfig.json
 
 参照 [antd4.x-stable tsconfig.json](https://github.com/ant-design/ant-design/blob/4.x-stable/tsconfig.json)
@@ -189,21 +199,87 @@ pnpm dlx storybook@latest init
     "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    // 🔥指定JSX代码生成用于的开发环境
     "jsx": "react",
     "jsxFactory": "React.createElement",
     "jsxFragmentFactory": "React.Fragment",
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
+    // 🔥目标语言的版本
     "target": "es6",
-    "lib": ["dom", "es2017"],
+    // 🔥ts引用的库
+    "lib": ["dom", "esnext"],
     "skipLibCheck": true,
     "stripInternal": true,
+    // 🔥生成类型声明
     "declaration": true,
-    "declarationDir": "dist/es/types"
+    "declarationDir": "es/types"
   },
   "exclude": ["node_modules", "lib", "es"]
 }
 ```
 
+**注意**
+
+- 开启类型声明导出，并指定 .d.ts 文件的输出路径，确保与 package.json typings 字段定义的类型声明文件入口路径一致。
+
 ### rollup.config.js
+
+首先安装 rollup 以及相应的插件：
+
+```js
+npm i -D rollup rollup-plugin-typescript2 @rollup/plugin-commonjs @rollup/plugin-node-resolve rollup-plugin-peer-deps-external rollup-plugin-postcss node-sass
+```
+
+然后在项目根路径下创建 rollup.config.js 配置文件：
+
+```js
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "rollup-plugin-typescript2";
+import postcss from "rollup-plugin-postcss";
+// esm 模块加载 json 文件的方式：
+import packageJson from "./package.json" assert {type: 'json'};
+
+export default {
+  // rollup 打包的入口文件
+  input: "components/index.ts",
+  // rollup 输出路径：分别输出 esm 模块和 cjs 模块
+  output: [
+    {
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true
+    },
+    {
+      file: packageJson.module,
+      format: "esm",
+      sourcemap: true
+    }
+  ],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript({ useTsconfigDeclarationDir: true }),
+    postcss({
+      extract: 'css/index.css'
+    })
+  ]
+};
+```
+
+#### 插件解析
+
+- rollup-plugin-peer-deps-external: prevents Rollup from bundling the peer dependencies we've defined in package.json (react and react-dom)
+- @rollup/plugin-node-resolve: efficiently bundles third party dependencies we've installed and use in node_modules
+- @rollup/plugin-commonjs: enables transpilation into CommonJS (CJS) format
+- rollup-plugin-typescript2: transpiles our TypeScript code into JavaScript. This plugin will use all the settings we have set in tsconfig.json. We set "useTsconfigDeclarationDir": true so that it outputs the .d.ts files in the directory specified by in tsconfig.json
+- [rollup-plugin-postcss](https://www.npmjs.com/package/rollup-plugin-postcss): transforms our Sass into CSS. In order to get this plugin working with Sass, we've installed node-sass. It also supports CSS Modules, LESS and Stylus.
+  - 配置 extract 可以提取 js 文件中的 css 导入，并在指定位置生成 .css 文件。不指定输出目录，则在对应输出的 js 文件路径下生成 .css 文件。
+
+### webpack.config.js
+
+待更新...
