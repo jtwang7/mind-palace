@@ -83,7 +83,11 @@ pnpm init
 
 参考文章：[Creating a React Component Library using Rollup, Typescript, Sass and Storybook](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
 
-进入 `packages/aurora-design` 项目路径进行开发。
+项目搭建介绍：
+- 项目路径: `packages/aurora-design`
+- 打包工具: rollup
+- 组件开发工具: storybook
+- 主要技术栈: react + react-dom + typescript
 
 ### package.json
 
