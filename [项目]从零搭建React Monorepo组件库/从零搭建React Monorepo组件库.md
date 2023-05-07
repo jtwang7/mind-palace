@@ -91,7 +91,7 @@ pnpm init
 
 ### package.json
 
-```json
+```js
 {
   "name": "aurora-design",
   "version": "1.0.0",

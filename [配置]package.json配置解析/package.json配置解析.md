@@ -22,7 +22,7 @@ package.json 作用：存储一切与项目相关的配置，例如项目基本�
 
 主要是项目的基本信息，包括名称，版本，描述，仓库，作者等，部分会展示在 npm 官网上。
 
-```json
+```js
 {
   // 🔥项目名称 or npm包名
   "name": "react", 
@@ -124,7 +124,7 @@ exports 字段的优先级高于 main / module 等入口文件字段。它有多
 
 exports 字段可以指定脚本或子目录的别名，此时它的前缀的参照拼接路径是包名。
 
-```json
+```js
 // ./node_modules/es-module-package/package.json
 {
   "exports": {
@@ -154,7 +154,7 @@ import submodule from './node_modules/es-module-package/private-module.js';
 
 exports 字段的别名如果是 `.`，就代表模块的主入口，优先级高于 main 字段，并且可以直接简写成 exports 字段的值。
 
-```json
+```js
 {
   "exports": {
     ".": "./main.js"
@@ -169,7 +169,7 @@ exports 字段的别名如果是 `.`，就代表模块的主入口，优先级�
 
 由于 exports 字段只有支持 ES6 的 Node.js 才认识，所以可以同时添加 main 字段来兼容旧版本的 Node.js。
 
-```json
+```js
 {
   "main": "./main-legacy.cjs",
   "exports": {
@@ -200,7 +200,7 @@ exports 字段的别名如果是 `.`，就代表模块的主入口，优先级�
 
 ## 脚本配置
 
-```json
+```js
 {
   // npm run {scripts} / yarn {scripts} 等命令行方式启动预设置的脚本
   "scripts": {
@@ -217,7 +217,7 @@ exports 字段的别名如果是 `.`，就代表模块的主入口，优先级�
 
 项目依赖其他包引用的相关信息。
 
-```json
+```js
 {
   // 项目生产环境(运行时)下需要用到的依赖
   // 使用 npm install xxx 或则 npm install xxx --save 时，会被自动插入到该字段中。
@@ -244,7 +244,7 @@ exports 字段的别名如果是 `.`，就代表模块的主入口，优先级�
 比如我们安装 A，A 的正常使用依赖 B@2.x 版本，那么 B@2.x 就应该被列在 A 的 peerDependencies 下，表示“如果你使用我，那么你也需要安装 B，并且至少是 2.x 版本”。
 比如 React 组件库 Ant Design，它的 package.json 里 peerDependencies 为
 
-```json
+```js
 "peerDependencies": {
   "react": ">=16.9.0",
   "react-dom": ">=16.9.0"
@@ -257,7 +257,7 @@ exports 字段的别名如果是 `.`，就代表模块的主入口，优先级�
 
 一些第三方库或应用在进行某些内部处理时会依赖这些字段，安装对应的第三方库后可以通过这些字段进行额外的配置。
 
-```json
+```js
 {
   // 其他工具访问本项目 ts 类型定义时的入口文件
   "types": "./index.d.ts",
