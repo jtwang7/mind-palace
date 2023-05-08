@@ -243,8 +243,8 @@ module.exports = {
       {
         // @include: 只解析该选项指定路径下的模块。
         // @exclude: 不解该选项配置的模块(优先级更高)。
-        include: [path.resolve(__dirname, '../src')] // 只对项目src文件的ts,tsx进行loader解析。
-        test: /.(ts|tsx)$/, //匹配以.ts或.tsx结尾的文件
+        include: [path.resolve(__dirname, 'src')] // 只对项目src文件的ts,tsx进行loader解析。
+        test: /\.(ts|tsx)$/, //匹配以.ts或.tsx结尾的文件
         use: 'babel-loader',
         // options: { ... }
       },
@@ -290,7 +290,7 @@ module.exports = {
     rules: [
       // --- 样式 loader ---
       {
-        test: /.(css|less)$/, //匹配 css 文件
+        test: /\.(css|less)$/, //匹配 css 文件
         use: ['style-loader','css-loader', 'less-loader'] // 匹配到less文件后, 使用less-loader解析为css, 再用css-loader解析, 再借助style-loader把css解析结果插入到头部style标签中
       }
     ]
@@ -378,6 +378,33 @@ module.exports = {
     ],
   },
 };
+```
+
+若想共用 mini-css-extract-plugin 和 style-loader 的功能，必须在 loader 加载时判断当前运行环境：
+- 开发环境：mode === 'development' 调用 style-loader
+- 生产环境：mode === 'production' 调用 mini-css-extract-plugin
+
+> 参照 [using-mini-css-extract-plugin-and-style-loader-together](https://stackoverflow.com/questions/55678211/using-mini-css-extract-plugin-and-style-loader-together)
+
+```js
+module.exports = (_, { mode }) => ({
+  // other options here
+  module: {
+    rules: [
+      // other rules here
+      {
+        test: /\.s?css$/i,
+        use: [
+          mode === 'production'
+            ? MiniCssExtractPlugin.loader
+            : 'style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+    ],
+  },
+});
 ```
 
 ### 其他配置
