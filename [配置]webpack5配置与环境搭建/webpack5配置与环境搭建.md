@@ -120,6 +120,7 @@
 ## webpack.config.js 配置
 
 - [webpack documentation](https://webpack.js.org/concepts/)
+- [webpack configuration](https://webpack.js.org/configuration/)
 
 小技巧：在使用 vscode 配置 webpack.{config}.js 时，可以在文件开头加上：
 
@@ -135,8 +136,8 @@
 
 ### entry / output
 
-- [entry](https://webpack.js.org/concepts/entry-points)
-- [output](https://webpack.js.org/concepts/output/)
+- [entry](https://webpack.docschina.org/configuration/entry-context/)
+- [output](https://webpack.docschina.org/configuration/output/)
 
 #### 常见配置
 
