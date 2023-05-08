@@ -214,6 +214,10 @@ module.exports = {
   experiments: {
     outputModule: true,
   },
+  // 如果需要识别文件省略的后缀，需要通过以下字段配置：
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'], 
+  }
 };
 ```
 
