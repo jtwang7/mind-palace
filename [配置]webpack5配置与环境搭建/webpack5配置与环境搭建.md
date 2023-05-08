@@ -345,6 +345,7 @@ pnpm add -D mini-css-extract-plugin css-minimizer-webpack-plugin
 ```
 
 ✅ mini-css-extract-plugin 通常和 css-loader 联用，首先对 css 进行解析，然后再通过插件打包。
+
 ❌ style-loader 作用也是抽离 js 文件中的 css 样式，但它会将其注入到头文件 `<style />` 标签下，而不是单独生成 .css 文件。style-loader 与 mini-css0extract-plugin 两者功能冲突，mini-css0extract-plugin 会覆盖 style-loader 功能导致其失效，因此两者不能共用。
 
 最终 webpack.config.js 配置如下：
