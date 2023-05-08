@@ -117,7 +117,7 @@
 
     执行**`npm run build`**,最终打包到指定输出目录下 (参考公共配置 `output` 属性)。
 
-## 深度配置
+## webpack.config.js 配置
 
 - [webpack documentation](https://webpack.js.org/concepts/)
 
@@ -132,7 +132,7 @@ const {Configuration} = require('webpack');
 
 添加后 vscode 会在你配置 webpack 时自动给予代码提示。
 
-> 参考：[webpack配置项智能提示](https://joshuatz.com/posts/2020/vscode-intellisense-autocomplete-for-webpack-config-files/)
+> 参考：[webpack配置项智能提示](https://juejin.cn/post/7090346314411540517)
 
 ### entry / output
 
