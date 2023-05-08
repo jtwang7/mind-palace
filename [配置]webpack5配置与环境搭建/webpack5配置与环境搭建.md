@@ -183,6 +183,37 @@ module.exports = {
 // writes to disk: ./dist/app.js, ./dist/search.js
 ```
 
+#### 同时打包 cjs ; esm 模块
+
+webpack 通过 [output-library](https://webpack.docschina.org/configuration/output/#outputlibrary) 字段向外提供了定制不同输出格式的能力。
+当我们需要同时输出不同模块规范的打包产物时，可以按照下述方法配置 library 字段：
+
+```js
+// webpack.config.js
+module.exports = {
+  // entry: {<entryChunkName>:string} | string[]
+  entry: path.resolve(__dirname, "src/index.tsx"),
+  output: {
+    es: {
+      path: path.resolve(__dirname, 'es'),
+      filename: "index.js",
+      clean: true,
+      library: {
+        type: "module"
+      }
+    },
+    lib: {
+      path: path.resolve(__dirname, 'lib'),
+      filename: "index.js",
+      clean: true,
+      library: {
+        type: "commonjs2"
+      }
+    }
+  },
+};
+```
+
 ### loader
 
 #### babel-loader 配置
