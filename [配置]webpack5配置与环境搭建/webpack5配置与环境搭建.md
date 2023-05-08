@@ -384,7 +384,10 @@ module.exports = {
 - 开发环境：mode === 'development' 调用 style-loader
 - 生产环境：mode === 'production' 调用 mini-css-extract-plugin
 
-> 参照 [using-mini-css-extract-plugin-and-style-loader-together](https://stackoverflow.com/questions/55678211/using-mini-css-extract-plugin-and-style-loader-together)
+参照:
+
+- [using-mini-css-extract-plugin-and-style-loader-together](https://stackoverflow.com/questions/55678211/using-mini-css-extract-plugin-and-style-loader-together)
+- [webpack config export](https://webpack.docschina.org/configuration/configuration-types/#exporting-a-function)
 
 ```js
 module.exports = (_, { mode }) => ({
