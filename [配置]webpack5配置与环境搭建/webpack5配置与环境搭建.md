@@ -183,7 +183,7 @@ module.exports = {
 // writes to disk: ./dist/app.js, ./dist/search.js
 ```
 
-#### 同时打包 cjs ; esm 模块
+#### 指定输出的模块规范
 
 webpack 通过 [output-library](https://webpack.docschina.org/configuration/output/#outputlibrary) 字段向外提供了定制不同输出格式的能力。
 当我们需要同时输出不同模块规范的打包产物时，可以按照下述方法配置 library 字段：
@@ -194,22 +194,25 @@ module.exports = {
   // entry: {<entryChunkName>:string} | string[]
   entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
-    es: {
-      path: path.resolve(__dirname, 'es'),
-      filename: "index.js",
-      clean: true,
-      library: {
-        type: "module"
-      }
+    // 输出 esm 规范
+    path: path.resolve(__dirname, 'es'),
+    filename: "index.js",
+    clean: true,
+    library: {
+      type: "module"
     },
-    lib: {
-      path: path.resolve(__dirname, 'lib'),
-      filename: "index.js",
-      clean: true,
-      library: {
-        type: "commonjs2"
-      }
-    }
+
+    // 或者输出 cjs 规范
+    // path: path.resolve(__dirname, 'lib'),
+    // filename: "index.js",
+    // clean: true,
+    // library: {
+    //   type: "commonjs2"
+    // }
+  },
+  // esm 模块规范输出还在试验阶段，因此需要加上如下字段：
+  experiments: {
+    outputModule: true,
   },
 };
 ```
@@ -246,7 +249,14 @@ module.exports = {
         include: [path.resolve(__dirname, 'src')] // 只对项目src文件的ts,tsx进行loader解析。
         test: /\.(ts|tsx)$/, //匹配以.ts或.tsx结尾的文件
         use: 'babel-loader',
-        // options: { ... }
+        // babel-loader options 放在 babel.config.js 中配置，并被 webpack 自动加载。
+        // 也可以如下引入：
+        // use: {
+        //   loader: "babel-loader",
+        //   options: {
+        //     ...
+        //   }
+        // }
       },
     ]
   }
