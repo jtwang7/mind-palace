@@ -44,14 +44,9 @@
 
 ## 🧐 待读...
 
-- [x] [2020年了,再不会webpack敲得代码就不香了(近万字实战)](https://juejin.cn/post/6844904031240863758#heading-33)
-- [x] [5W1H 带你入门 Monorepo](https://juejin.cn/post/7207689082184974394)
-- [ ] [Monorepo 下的模块包设计实践](https://juejin.cn/post/7052271542000074782#heading-11)
-- [x] [Element Plus 组件库相关技术揭秘：2. 组件库工程化实战之 Monorepo 架构搭建](https://juejin.cn/post/7146183222425518093#heading-6)
-- [x] [使用 pnpm 构建 Monorepo 项目](https://zhuanlan.zhihu.com/p/373935751)
-- [x] [Yarn Workspaces: Organize Your Project’s Codebase Like A Pro](https://www.smashingmagazine.com/2019/07/yarn-workspaces-organize-project-codebase-pro/)
-- [x] [Yarn Workspace使用指南](https://juejin.cn/post/6974967455114362888)
 - [ ] [React.memo()](https://juejin.cn/post/6844904002652471309)
 - [ ] [useDeferredValue](https://juejin.cn/post/7083466010505773093)
 - [ ] [React页面：我不想帮组件管理它的状态](https://juejin.cn/post/6977397653654994975)
 - [ ] [如何写出更优雅的 React 组件 - 设计思维篇](https://www.51cto.com/article/695041.html)
+- [ ] [React 组件库 CSS 样式方案分析](https://juejin.cn/post/7097100515535765534#heading-7)
+- [ ] [使用gulp打包js/scss/less/font文件](https://www.cnblogs.com/smart-elwin/p/15920646.html)
