@@ -124,9 +124,8 @@
 小技巧：在使用 vscode 配置 webpack.{config}.js 时，可以在文件开头加上：
 
 ```js
-const {Configuration} = require('webpack');
 /**
- * @type {Configuration}
+ * @type {import("webpack").Configuration}
  */
 ```
 
