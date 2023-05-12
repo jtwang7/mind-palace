@@ -5,8 +5,10 @@
 - [x] [Render and Commit](https://react.dev/learn/render-and-commit)
   > 组件渲染流程
 - [x] [Rendering Lists](https://react.dev/learn/rendering-lists#rules-of-keys)
-  - [x] [Keeping list items in order with key](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key) 
-    > 组件 key 的作用及用法
+- **组件 key 的作用及应用场景**
+  - [x] [Keeping list items in order with key](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
+  - [x] [Resetting state with a key](https://react.dev/reference/react/useState#resetting-state-with-a-key)
+  - [x] [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state)
 - [x] [useState](https://react.dev/reference/react/useState#storing-information-from-previous-renders)
   - [x] [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates)
     > Batch Update 原理
