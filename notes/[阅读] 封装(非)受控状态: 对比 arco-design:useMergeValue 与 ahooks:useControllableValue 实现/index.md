@@ -28,7 +28,9 @@ import { useRerenderCounter } from "./useRerenderCounter";
 const Demo1: React.FC<DemoProps> = (props) => {
   const { defaultValue, value, onChange } = props;
   // 判断是否存在 value 属性字段
-  const isControlled = Reflect.has(props, "value");
+  // 注意：这里用 Object.property.hasOwnProperty() 的好处在于，它不会去判断对象继承类型上的属性字段。
+  // Reflect.has() 以及 in 方法判断对象字段会追溯到其继承类型。
+  const isControlled = props.hasOwnProperty("value");
 
   // 组件始终维护并使用内部状态
   // 若组件受控，则手动同步内外状态
@@ -73,6 +75,10 @@ export default Demo1;
 1. 受控状态下，组件内部状态更新始终比外部状态更新晚一个渲染周期。**(原因在于 useEffect)**
 2. 受控状态下，存在重复渲染的情况: 同步内外状态调用 setState 触发 re-render，props.value 变动时导致 re-render。**(原因在于 setState)**
 
+✨ **小Tips**
+代码中，对于对象内是否存在某字段的判断逻辑：使用的是 `Object.property.hasOwnProperty()`
+其好处在于: 它不会去判断对象继承类型上的属性字段。`Reflect.has()` 以及 `in` 方法判断对象字段会追溯到其继承类型。
+
 ### Demo2
 
 为了解决上述问题，我们实现了 Demo2，通过 `useRef + forceUpdate` 的形式，替代 `useState + useEffect` 实现内外状态的实时同步。
@@ -86,7 +92,7 @@ import { useRerenderCounter } from "./useRerenderCounter";
 const Demo2: React.FC<DemoProps> = (props) => {
   const { defaultValue, value, onChange } = props;
   // 判断是否存在 value 属性字段
-  const isControlled = Reflect.has(props, "value");
+  const isControlled = props.hasOwnProperty("value");
 
   // 内部状态
   const innerValue = useRef((isControlled ? value : defaultValue) ?? 0);
@@ -149,7 +155,7 @@ import { useRerenderCounter } from "./useRerenderCounter";
 const Demo3: React.FC<DemoProps> = (props) => {
   const { defaultValue, value, onChange } = props;
   // 判断是否存在 value 属性字段
-  const isControlled = Reflect.has(props, "value");
+  const isControlled = props.hasOwnProperty("value");
 
   // 内部状态
   const _default = (isControlled ? value : defaultValue) ?? 0;
