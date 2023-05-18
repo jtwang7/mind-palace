@@ -31,8 +31,13 @@
 - **受控组件与非受控组件**
   - [ ] [一次手写Antd Form的经历，让我受益匪浅](https://juejin.cn/post/7038099720400535582)
   - [ ] [React受控&非受控组件——我想都要！](https://juejin.cn/post/7051855761588092958)
+- **封装(非)受控状态: 对比 arco-design:useMergeValue 与 ahooks:useControllableValue 实现**
   - [x] [React 组件的受控与非受控](https://zhuanlan.zhihu.com/p/536322574)
-  - [ ] [ahooks-useControllableValue](https://github.com/alibaba/hooks/blob/master/packages/hooks/src/useControllableValue/index.ts)
+  - [x] [arco-design: useMergeValue](https://github.com/arco-design/arco-design/blob/main/components/_util/hooks/useMergeValue.ts#L5)
+  - [ ] [ahooks(2.x)-useControllableValue](https://github.com/alibaba/hooks/blob/release/v2.x/packages/hooks/src/useControllableValue/index.ts)
+  - [x] [[疑问] useControllableValue 为什么要在有 props.value 的情况下将 props.value 同步到 state](https://github.com/alibaba/hooks/issues/984)
+  - [x] [ahooks(3.x)-useControllableValue](https://github.com/alibaba/hooks/blob/master/packages/hooks/src/useControllableValue/index.ts)
+  - [x] [ahooks-useControllableValue 更新记录](https://github.com/alibaba/hooks/commit/d0ebab6923f09f172288dbb27cd8ffc2722647f8)
 
 ## Github
 
