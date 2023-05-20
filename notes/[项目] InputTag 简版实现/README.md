@@ -256,6 +256,7 @@ export default React.forwardRef(InputTag);
 ### event:blur 与 event:click 冲突的问题
 
 当同时设置 `InputTag:allowClear` 和 `InputTag:saveOnBlur` 为 true 时，发现:
+
 ![404](images/problem-click%20with%20blur.gif)
 
 当我们点击清除时，InputTag 执行了 saveOnBlur 的逻辑，并没有正确清除所有 tags。
@@ -296,9 +297,11 @@ export default Input;
 
 🔥 值得注意的是：我们调用 `e.preventDefault()` 禁用 mousedown 原生是必要的。当点击某 dom 时，mousedown 会将焦点定位到当前点击对象上。这就导致我们 mousedown 逻辑执行完后，会触发 blur 事件并执行相应的逻辑。对于当前应用场景而言，我们不希望清除 tags 后又重新存入还未输入完成的 input content。因此我们需要禁用 mousedown 的原生逻辑。
 未禁用 mousedown 原生逻辑，实际渲染效果如下:
+
 ![404](images/problem-mousedown%20with%20default.gif)
 
 正确的渲染效果如下:
+
 ![404](images/correct%20render.gif)
 
 ### 其他细节
