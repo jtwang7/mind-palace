@@ -286,9 +286,8 @@ module.exports = {
 
 ✨ **babel-loader + @babel/preset-typescript 处理 ts 文件的问题:**
 webpack 处理 ts 文件可以通过 ts-loader 或者 babel-loader+@babel/preset-typescript 实现，两种转译方式不能混用。
-与 ts-loader 不同的是，@babel/preset-typescript 只为 babel 提供了负责把 ts 语法转换成 js（其实就是去掉 ts 那些类型标记和声明）的能力，然后再通过 babel 转译成低版本 js，不会生成声明文件。详见: [@babel/preset-typescript generate declaration file](https://github.com/babel/babel/issues/9850)。
+与 ts-loader 不同的是，@babel/preset-typescript 只为 babel 提供了负责把 ts 语法转换成 js（其实就是去掉 ts 那些类型标记和声明）的能力，然后再通过 babel 转译成低版本 js。它并不会读取 tsconfig.json 配置文件，不会生成声明文件。详见: [@babel/preset-typescript generate declaration file](https://github.com/babel/babel/issues/9850)。
 > 官方建议是只用 babel 做转译、再 tsc --emitDeclarationOnly 单独生成声明文件。
-
 
 #### style-loader / css-loader / less-loader 等样式 loader 配置
 
