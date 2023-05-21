@@ -147,17 +147,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   //webpack 编译时访问的入口文件
-  entry: path.join(__dirname, '../src/index.tsx'), 
+  entry: path.resolve(__dirname, '../src/index.tsx'), 
   //打包文件出口
   output: {
     //编译后输出的每个js文件名称
     filename: 'static/js/[name].js', 
     //打包结果输出路径
-    path: path.join(__dirname, '../dist'), 
+    path: path.resolve(__dirname, '../dist'), 
     //打包前删除原有打包文件。webpack4需要配置clean-webpack-plugin；webpack5内置
     clean: true, 
     //打包后文件的公共前缀路径
-    publicPath: '/' 
+    publicPath: '/',
+    // 模块打包配置
+    library: {
+      name: "@tian/ui", // 模块名称: https://webpack.docschina.org/configuration/output/#outputlibraryname
+      type: "umd2", // 模块版本: https://webpack.docschina.org/configuration/output/#outputlibrarytype
+    },
   },
 }
 ```
@@ -396,6 +401,7 @@ module.exports = {
 ```
 
 若想共用 mini-css-extract-plugin 和 style-loader 的功能，必须在 loader 加载时判断当前运行环境：
+
 - 开发环境：mode === 'development' 调用 style-loader
 - 生产环境：mode === 'production' 调用 mini-css-extract-plugin
 
@@ -443,7 +449,7 @@ module.exports = {
     extensions: ['.js', '.tsx', '.ts'], 
     // @alias: 配置路径别名
     alias: {
-      '@': path.join(__dirname, '../src')
+      '@': path.resolve(__dirname, '../src')
     }
   }
 }
