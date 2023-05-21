@@ -451,7 +451,12 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, '../src')
     }
-  }
+  },
+
+  // https://webpack.docschina.org/configuration/externals/
+  // 包含在 externals 中的依赖不会被打包，用户在使用过程时需要额外安装这些依赖。
+  // externals 包裹一些常用的依赖项，可以减少较多打包的体积
+  externals: ["react", "react-dom"]
 }
 ```
 
