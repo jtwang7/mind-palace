@@ -335,10 +335,6 @@ function compileCss(modules) {
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.5",
     "@babel/runtime": "^7.21.5",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "@types/uuid": "^9.0.1",
@@ -354,9 +350,6 @@ function compileCss(modules) {
     "less-plugin-autoprefix": "^2.0.0",
     "merge2": "^1.4.1",
     "rimraf": "^5.0.1",
-    "rollup-plugin-cleanup": "^3.2.1",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.34.1",
     "through2": "^4.0.2",
     "typescript": "^5.0.4",
     "webpack": "^5.83.1",
@@ -381,10 +374,145 @@ function compileCss(modules) {
 
 ## rollup 实践
 
-关于 `rollup.config.js` 各字段配置项可参考: [rollup.js options lists](https://www.rollupjs.com/guide/big-list-of-options#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD-core-functionality)
+### 准备工作
 
-关于 `@rollup/plugin-node-resolve` 和 `@rollup/plugin-commonjs` 的应用目的，参考[我如何在使用 CommonJS 模块的 Node.js 中使用 Rollup?](https://www.rollupjs.com/guide/faqs#%E6%88%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8-commonjs-%E6%A8%A1%E5%9D%97%E7%9A%84-nodejs-%E4%B8%AD%E4%BD%BF%E7%94%A8-rollup)
+✨ **参考:**
 
-关于 Rollup 插件库可参考 [rollup.js-awesome](https://github.com/rollup/awesome)
+- 关于 `rollup.config.js` 各字段配置项可参考: [rollup.js options lists](https://www.rollupjs.com/guide/big-list-of-options#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD-core-functionality)
+- 关于 `@rollup/plugin-node-resolve` 和 `@rollup/plugin-commonjs` 的应用目的，参考[我如何在使用 CommonJS 模块的 Node.js 中使用 Rollup?](https://www.rollupjs.com/guide/faqs#%E6%88%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8-commonjs-%E6%A8%A1%E5%9D%97%E7%9A%84-nodejs-%E4%B8%AD%E4%BD%BF%E7%94%A8-rollup)
+- 关于 Rollup 插件库可参考 [rollup.js-awesome](https://github.com/rollup/awesome)
 
-## gulp+tsc+webpack 与 rollup 的对比
+✨ **Rollup 依赖:**
+
+  ```js
+  // 环境构建
+  npm install --global rollup
+  npm init
+
+  // 依赖安装(本例中后续需要的依赖)
+  npm install --save-dev @rollup/plugin-node-resolve // 处理第三方依赖导入
+  npm install --save-dev @rollup/plugin-commonjs // 处理 commonjs 模块的导入
+  npm install --save-dev @rollup/plugin-typescript // 处理 ts
+  npm install --save-dev @rollup/plugin-json // 处理 json
+  ```
+
+### ESM-rollup.config.js 配置
+
+导出 ESM 模块规范的构建产物的 `rollup.config.js` 配置如下:
+
+```js
+// rollup.esm.config.mjs
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import json from "@rollup/plugin-json";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
+  input: path.resolve(__dirname, "./components/index.tsx"),
+  output: [
+    {
+      dir: path.resolve(__dirname, "./es"),
+      format: "esm",
+      sourcemap: true,
+      preserveModules: true,
+    },
+  ],
+  plugins: [
+    resolve(),
+    commonjs(),
+    json(),
+    typescript({
+      compilerOptions: {
+        declaration: true,
+        declarationDir: path.resolve(__dirname, "./es/library/rollup/types"),
+      },
+    }),
+  ],
+  external: ["react", "react-dom"],
+};
+```
+
+我们定义 `output.format = "esm"`，模块最终会被导出为 ESM 模块类型，`output.preserveModules = true` 设置后将使用原始模块名作为文件名，为所有模块创建单独的 chunk，即 Rollup 可以只输出编译产物，不输出打包产物。`output.preserveModules = true` 需要与 `output.dir` 配合使用，构建产物最终会输出到 `output.dir` 目录路径下。
+> 不指定 `output.preserveModules` 时，Rollup 默认输出打包产物，此时需要设置 `output.file` 指定打包文件的输出路径。
+
+此处需要用到 `@rollup/plugin-typescript` 编译 ts 代码，同时指定 `.d.ts` 文件的输出位置。
+
+### CJS-rollup.config.js 配置
+
+导出 CJS 模块规范的构建产物的 `rollup.config.js` 配置如下:
+
+```js
+// rollup.commonjs.config.mjs
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import json from "@rollup/plugin-json";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
+  input: path.resolve(__dirname, "./components/index.tsx"),
+  output: [
+    {
+      dir: path.resolve(__dirname, "./lib"),
+      format: "cjs",
+      sourcemap: true,
+      preserveModules: true,
+    },
+  ],
+  plugins: [
+    resolve(),
+    commonjs(),
+    json(),
+    typescript({
+      compilerOptions: {
+        declarationDir: path.resolve(__dirname, "./lib/library/rollup/types"),
+      },
+    }),
+  ],
+  external: ["react", "react-dom"],
+};
+```
+
+与 `rollup.esm.config.mjs` 唯一不同点在于 `output.format = "cjs"`。
+
+### UMD-rollup.config.js 配置
+
+导出 UMD 模块规范的构建产物的 `rollup.config.js` 配置如下:
+
+```js
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import json from "@rollup/plugin-json";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export default {
+  input: path.resolve(__dirname, "./components/index.tsx"),
+  output: [
+    {
+      file: path.resolve(__dirname, "./dist/index.min.js"),
+      format: "umd",
+      name: "@tian/ui-rollup", // umd 需要提供 name，将作为全局名称挂在到 window 对象上。
+      sourcemap: true,
+    },
+  ],
+  plugins: [
+    resolve(),
+    commonjs(),
+    typescript({ compilerOptions: { declaration: false } }),
+    json(),
+  ],
+};
+```
+
+在 UMD 中，我们不需要 TS 的类型声明文件，因此设置 `declaration: false`。此外，我们还需要设置 `output.name = "xxx"`，在 Rollup 中当产物输出格式为 iife 或 umd 时，需要指定 [output.name](https://www.rollupjs.com/guide/big-list-of-options#outputname)，它将作为全局变量名使用。
