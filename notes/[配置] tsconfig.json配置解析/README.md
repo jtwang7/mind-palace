@@ -3,6 +3,7 @@
 参考文章:
 
 - [掌握 tsconfig.json](https://juejin.cn/post/6844904178234458120//heading-13)
+- [tsconfig.json配置详解](https://segmentfault.com/a/1190000021749847)
 
 ## 介绍
 
@@ -66,7 +67,7 @@ tsconfig.json 作用：
     "checkJs": true, 
     // 🔥指定输出目录
     "outDir": "./dist", 
-    // 🔥指定输出文件目录(用于输出)，用于控制输出目录结构
+    // 🔥指定编译文件的根目录，编译器会在根目录查找入口文件
     "rootDir": "./", 
     // 🔥生成声明文件，开启后会自动生成声明文件
     "declaration": true, 

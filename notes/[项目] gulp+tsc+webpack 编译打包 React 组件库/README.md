@@ -66,9 +66,10 @@ Rollup 遵循 ESM 模块规范进行设计，天然地支持 tree-shaking 特性
 
 1. 因此在打包遵循 ESM 规范的源代码时，能够在打包阶段就过滤掉未被使用的代码，减小打包产物的体积。
 2. 其能够输出 CJS, ESM, UMD, IIFE 等各种模块规范或格式的产物文件。
-3. 通过设定 `preserveModules: true`，Rollup 还支持只输出构建产物，而不输出打包产物。这使得其特别适合于组件库构建的应用场景。
+3. 通过设定 `output.preserveModules: true`，Rollup 还可支持只输出构建产物，而不输出打包产物。这使得其特别适合于组件库构建的应用场景。具体参考[rollup.js-output.preserveModules](https://www.rollupjs.com/guide/big-list-of-options#outputpreservemodules)。
+   > 该选项将使用原始模块名作为文件名，为所有模块创建单独的 chunk。
 
-与 Webpack 相对的，Rollup 自身无法打包多种类型资源，例如图片等静态资源。
+与 Webpack 相对的，Rollup 自身无法打包多种类型资源，例如图片等静态资源。但是可通过 rollup 插件补足这些功能，参考[文章](https://juejin.cn/post/7210684943252045882)。
 
 🔥 一般而言，对于应用使用 Webpack，对于类库使用 Rollup；需要代码拆分(Code Splitting)，或者很多静态资源需要处理，再或者构建的项目需要引入很多 Commonjs 模块的依赖时，使用 webpack。代码库是基于 ES6 模块，而且希望代码能够被其他人直接使用，使用 Rollup，例如 React 源码库，组件库等。Gulp 常用于处理具有规范项目结构的代码库构建，它能保证输入输出的项目结构一致，此外，丰富的 Gulp 插件也为我们提供了更多构建或打包的选项，更适合定制化构建打包场景需求。
 
@@ -253,7 +254,7 @@ const tsConfig = ts.createProject("tsconfig.json");
 
 上述 `tsconfig.json` 配置参考了 [antd-tsconfig.json](https://github.com/ant-design/ant-design/blob/master/tsconfig.json)。其中:
 
-- target 指定 es6，默认编译为 ESM 模块。
+- `module` 字段指定了输出的模块规范为 `esnext` (即 ESM 规范)，因此默认编译为 ESM 模块。
 - jsx 指定 react，支持 tsx 识别和编译。
 - 开启 declaration，在编译阶段生成对应的 `.d.ts` 类型声明文件。此处未指定 declarationDir，类型声明文件将默认输出在对应 ts 文件的同级目录下，并以对应 ts 文件名命名。
 
@@ -323,7 +324,6 @@ function compileCss(modules) {
   "scripts": {
     "build": "webpack -c webpack.config.js",
     "compile": "gulp compile",
-    "rollup-build": "rimraf ./rollup & rollup -c"
   },
   "keywords": [],
   "author": "",
@@ -380,5 +380,11 @@ function compileCss(modules) {
 ```
 
 ## rollup 实践
+
+关于 `rollup.config.js` 各字段配置项可参考: [rollup.js options lists](https://www.rollupjs.com/guide/big-list-of-options#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD-core-functionality)
+
+关于 `@rollup/plugin-node-resolve` 和 `@rollup/plugin-commonjs` 的应用目的，参考[我如何在使用 CommonJS 模块的 Node.js 中使用 Rollup?](https://www.rollupjs.com/guide/faqs#%E6%88%91%E5%A6%82%E4%BD%95%E5%9C%A8%E4%BD%BF%E7%94%A8-commonjs-%E6%A8%A1%E5%9D%97%E7%9A%84-nodejs-%E4%B8%AD%E4%BD%BF%E7%94%A8-rollup)
+
+关于 Rollup 插件库可参考 [rollup.js-awesome](https://github.com/rollup/awesome)
 
 ## gulp+tsc+webpack 与 rollup 的对比
