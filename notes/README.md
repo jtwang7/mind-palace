@@ -42,6 +42,7 @@
   - [x] [ahooks-useControllableValue 更新记录](https://github.com/alibaba/hooks/commit/d0ebab6923f09f172288dbb27cd8ffc2722647f8)
 
 - **[gulp+tsc+webpack 编译打包 React 组件库](https://github.com/jtwang7/mind-palace/tree/main/notes/%5B%E9%A1%B9%E7%9B%AE%5D%20gulp%2Btsc%2Bwebpack%20%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%20React%20%E7%BB%84%E4%BB%B6%E5%BA%93)**
+  - [x] [github仓库地址: gulp+tsc+webpack & rollup & test](https://github.com/jtwang7/gulp-ts-webpack-pack.git)
 
 ## Github
 

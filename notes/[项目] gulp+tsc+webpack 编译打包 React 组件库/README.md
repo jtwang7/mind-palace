@@ -1,5 +1,13 @@
 # gulp+tsc+webpack 编译打包 React 组件库
 
+**🚀 [github仓库地址](https://github.com/jtwang7/gulp-ts-webpack-pack.git)**
+
+**💡 仓库中包含:**
+
+- 基于 `Gulp+TypeScript+Webpack` 的构建打包工具
+- 基于 `Rollup` 的构建打包工具
+- 基于 React App 的测试环境及测试用例
+
 ## 编译(构建) & 打包
 
 参考: [前端为什么要工程化？](https://www.cnblogs.com/songyao666/p/14286880.html)
