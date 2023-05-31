@@ -1,6 +1,10 @@
 # 阅读清单
 
+> 🔥: 个人笔记
+
 ## React
+
+- 🔥 **[源码解析 useEffect 在父子组件中的执行顺序](https://github.com/jtwang7/mind-palace/blob/main/notes/%5BReact%E6%BA%90%E7%A0%81%5D%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%20useEffect%20%E5%9C%A8%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/README.md)**
 
 - [x] [Render and Commit](https://react.dev/learn/render-and-commit)
   > 组件渲染流程
@@ -33,7 +37,7 @@
   - [ ] [一次手写Antd Form的经历，让我受益匪浅](https://juejin.cn/post/7038099720400535582)
   - [ ] [React受控&非受控组件——我想都要！](https://juejin.cn/post/7051855761588092958)
   
-- **[封装(非)受控状态: 对比 arco-design:useMergeValue 与 ahooks:useControllableValue 实现](https://github.com/jtwang7/mind-palace/tree/main/notes/%5B%E9%98%85%E8%AF%BB%5D%20%E5%B0%81%E8%A3%85(%E9%9D%9E)%E5%8F%97%E6%8E%A7%E7%8A%B6%E6%80%81%3A%20%E5%AF%B9%E6%AF%94%20arco-design%3AuseMergeValue%20%E4%B8%8E%20ahooks%3AuseControllableValue%20%E5%AE%9E%E7%8E%B0)**
+- 🔥 **[封装(非)受控状态: 对比 arco-design:useMergeValue 与 ahooks:useControllableValue 实现](https://github.com/jtwang7/mind-palace/tree/main/notes/%5B%E9%98%85%E8%AF%BB%5D%20%E5%B0%81%E8%A3%85(%E9%9D%9E)%E5%8F%97%E6%8E%A7%E7%8A%B6%E6%80%81%3A%20%E5%AF%B9%E6%AF%94%20arco-design%3AuseMergeValue%20%E4%B8%8E%20ahooks%3AuseControllableValue%20%E5%AE%9E%E7%8E%B0)**
   - [x] [React 组件的受控与非受控](https://zhuanlan.zhihu.com/p/536322574)
   - [x] [arco-design: useMergeValue](https://github.com/arco-design/arco-design/blob/main/components/_util/hooks/useMergeValue.ts#L5)
   - [x] [ahooks(2.x)-useControllableValue](https://github.com/alibaba/hooks/blob/release/v2.x/packages/hooks/src/useControllableValue/index.ts)
@@ -41,7 +45,7 @@
   - [x] [ahooks(3.x)-useControllableValue](https://github.com/alibaba/hooks/blob/master/packages/hooks/src/useControllableValue/index.ts)
   - [x] [ahooks-useControllableValue 更新记录](https://github.com/alibaba/hooks/commit/d0ebab6923f09f172288dbb27cd8ffc2722647f8)
 
-- **[gulp+tsc+webpack 编译打包 React 组件库](https://github.com/jtwang7/mind-palace/tree/main/notes/%5B%E9%A1%B9%E7%9B%AE%5D%20gulp%2Btsc%2Bwebpack%20%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%20React%20%E7%BB%84%E4%BB%B6%E5%BA%93)**
+- 🔥 **[gulp+tsc+webpack 编译打包 React 组件库](https://github.com/jtwang7/mind-palace/tree/main/notes/%5B%E9%A1%B9%E7%9B%AE%5D%20gulp%2Btsc%2Bwebpack%20%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85%20React%20%E7%BB%84%E4%BB%B6%E5%BA%93)**
   - [x] [github仓库地址: gulp+tsc+webpack & rollup & test](https://github.com/jtwang7/gulp-ts-webpack-pack.git)
   - [x] [CodeSandbox: InputTag实现](https://codesandbox.io/s/inputtag-med39g)
 
