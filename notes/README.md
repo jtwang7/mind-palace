@@ -1,10 +1,12 @@
 # 阅读清单
 
 > 🔥: 个人笔记
+> ✨: 相关推荐
 
 ## React
 
 - 🔥 **[源码解析 useEffect 在父子组件中的执行顺序](https://github.com/jtwang7/mind-palace/blob/main/notes/%5BReact%E6%BA%90%E7%A0%81%5D%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%20useEffect%20%E5%9C%A8%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/README.md)**
+  - ✨ [全网最简单的React Hooks源码解析！](https://cloud.tencent.com/developer/article/1977982)
 
 - [x] [Render and Commit](https://react.dev/learn/render-and-commit)
   > 组件渲染流程
