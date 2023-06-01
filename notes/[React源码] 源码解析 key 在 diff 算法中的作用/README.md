@@ -300,7 +300,10 @@ function reconcileChildrenArray(
 }
 ```
 
+#### updateSlot
+
 分析 updateSlot 可知，它会优先比较新元素的 key 与旧节点的 key 是否一致，若一致则调用 updateElement 方法复用相应的 FiberNode 节点，若不一致则返回 null。
+值得一提的是，就算没有指定 key，也可能存在被复用的情况：从 `const key = oldFiber !== null ? oldFiber.key : null;` 可知 key 默认为 null，而 `element.key` 默认也是 null，因此当两者均未赋值 key 的情况下，仍会对其进行复用判断。
 
 ```js
 function updateSlot(
@@ -689,6 +692,17 @@ function mapRemainingChildren(
 
 - 若匹配到可复用的 FiberNode 节点，则会在 updateElement 中调用 useFiber，接收匹配到的可复用 FiberNode 对象和 element.props，生成新的 FiberNode。值得注意的是，复用 FiberNode 对象本质上就是克隆，因此，复用的 FiberNode 节点会保留相应的状态信息。这也就是为什么不正确的 key 赋值会导致状态信息没有被清空或正确更新的原因。
 - 若没有匹配到复用的 FiberNode 节点，则会在 updateElement 中调用 createFiberFromElement，创建一个全新的 FiberNode 对象，所有状态都是初始值。
+
+重点关注如下代码:
+
+```js
+existingChildren.get(
+  newChild.key === null ? newIdx : newChild.key,
+)
+```
+
+若新的元素中没有赋予 key 值，那将默认按照其在新元素数组中的索引位置，从索引表中查找取值。
+
 
 ```js
 function updateFromMap(
