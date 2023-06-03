@@ -25,6 +25,8 @@
   - [github仓库地址: gulp+tsc+webpack & rollup & test](https://github.com/jtwang7/gulp-ts-webpack-pack.git)
   - [CodeSandbox: InputTag实现](https://codesandbox.io/s/inputtag-med39g)
 
+- 🔥 **[InputTag 简版实现](https://github.com/jtwang7/mind-palace/blob/main/notes/%5B%E9%A1%B9%E7%9B%AE%5D%20InputTag%20%E7%AE%80%E7%89%88%E5%AE%9E%E7%8E%B0/README.md)**
+
 - 🔥 **[观察者模式实践](https://github.com/jtwang7/mind-palace/blob/main/notes/%5B%E9%80%9A%E7%94%A8%5D%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%AE%9E%E8%B7%B5/README.md)**
 
 ## React
