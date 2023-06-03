@@ -48,6 +48,8 @@
 3. Subject 维护注册的观察者列表及顶层的状态。
 4. Observer 提供 Subject 通知自己的方法(接口)。
 
+CodeSandbox 地址: [观察者模式](https://codesandbox.io/s/guan-cha-zhe-mo-shi-pctyw9)
+
 **Subject 实现:**
 
 ```js
