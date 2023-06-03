@@ -1,7 +1,7 @@
 # 阅读清单
 
 > 🔥: 个人笔记
-> ✨: 相关推荐
+> ✨: 相关好文推荐
 
 ## 笔记目录
 
@@ -11,6 +11,7 @@
 - 🔥 **[源码解析 key 在 diff 算法中的作用](https://github.com/jtwang7/mind-palace/blob/main/notes/%5BReact%E6%BA%90%E7%A0%81%5D%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%20key%20%E5%9C%A8%20diff%20%E7%AE%97%E6%B3%95%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/README.md)**
   - [React Diff 算法源码阅读笔记](https://juejin.cn/post/6987714071801888798#heading-5)
   - [React 源码- key 有什么作用, 可以省略吗?](https://juejin.cn/post/6998913043077791775)
+  - ✨ [详解 react diff](https://juejin.cn/post/6844903973585944589)
 
 - 🔥 **[封装(非)受控状态: 对比 arco-design:useMergeValue 与 ahooks:useControllableValue 实现](https://github.com/jtwang7/mind-palace/tree/main/notes/%5B%E9%98%85%E8%AF%BB%5D%20%E5%B0%81%E8%A3%85(%E9%9D%9E)%E5%8F%97%E6%8E%A7%E7%8A%B6%E6%80%81%3A%20%E5%AF%B9%E6%AF%94%20arco-design%3AuseMergeValue%20%E4%B8%8E%20ahooks%3AuseControllableValue%20%E5%AE%9E%E7%8E%B0)**
   - ✨ [React 组件的受控与非受控](https://zhuanlan.zhihu.com/p/536322574)

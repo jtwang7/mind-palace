@@ -2,6 +2,7 @@
 
 参考文章:
 
+- [详解 react diff](https://juejin.cn/post/6844903973585944589)
 - [React Diff 算法源码阅读笔记](https://juejin.cn/post/6987714071801888798#heading-5)
 - [React 源码- key 有什么作用, 可以省略吗?](https://juejin.cn/post/6998913043077791775)
 
