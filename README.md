@@ -41,6 +41,9 @@
 ## 🚀 好文推荐
 
 - [如何阅读大型前端开源项目的源码](https://juejin.cn/post/6844903607393845255)
+- [全新的 React 组件设计理念 Headless UI](https://juejin.cn/post/7160223720236122125)
+- [ECMAScript 2023 正式发布，有哪些新特性？](https://juejin.cn/post/7249610070718513212)
+- [React 组件库 CSS 样式方案分析](https://juejin.cn/post/7097100515535765534#heading-7)
 
 ## 🧐 待读...
 
@@ -48,6 +51,5 @@
 - [ ] [useDeferredValue](https://juejin.cn/post/7083466010505773093)
 - [ ] [React页面：我不想帮组件管理它的状态](https://juejin.cn/post/6977397653654994975)
 - [ ] [如何写出更优雅的 React 组件 - 设计思维篇](https://www.51cto.com/article/695041.html)
-- [ ] [React 组件库 CSS 样式方案分析](https://juejin.cn/post/7097100515535765534#heading-7)
 - [ ] [使用gulp打包js/scss/less/font文件](https://www.cnblogs.com/smart-elwin/p/15920646.html)
 - [ ] [全网最简单的React Hooks源码解析！](https://cloud.tencent.com/developer/article/1977982)

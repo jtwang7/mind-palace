@@ -81,6 +81,12 @@ class Subject {
       ob.update(this.state[ob.id]);
     });
   }
+
+  // 若全局管理了 state，则还可以为 Observer 提供相应的 state 更改接口
+  setState() {
+    // ...
+    this.notify()
+  }
 }
 
 export default Subject;
