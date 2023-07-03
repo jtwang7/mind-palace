@@ -37,12 +37,10 @@
   - [colormap](https://github.com/bpostlethwaite/colormap) `生成连续过渡色数组`
   - [react-color](https://github.com/casesandberg/react-color) `react颜色选择器`
   
-
 ## 🚀 好文推荐
 
 - [如何阅读大型前端开源项目的源码](https://juejin.cn/post/6844903607393845255)
 - [全新的 React 组件设计理念 Headless UI](https://juejin.cn/post/7160223720236122125)
-- [ECMAScript 2023 正式发布，有哪些新特性？](https://juejin.cn/post/7249610070718513212)
 - [React 组件库 CSS 样式方案分析](https://juejin.cn/post/7097100515535765534#heading-7)
 
 ## 🧐 待读...
