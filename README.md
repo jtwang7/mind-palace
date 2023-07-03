@@ -46,6 +46,10 @@
 - [immer.js:也许更适合你的immutable js库](https://juejin.cn/post/6844904111402385422#heading-4)
 - [JavaScript 新特性最全指南：ES2023 ～ ES2016](https://www.51cto.com/article/745333.html)
 
+## 课程资料推荐
+
+- [【Udemy高分付费课程】Next.js 和 React - 完整开发指南 学习并使用Next.js搭建全栈应用程序（中英文字幕）](https://www.bilibili.com/video/BV1G54y1o7RP/?spm_id_from=333.337.search-card.all.click)
+
 ## 🧐 待读...
 
 - [ ] [React.memo()](https://juejin.cn/post/6844904002652471309)
