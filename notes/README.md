@@ -31,40 +31,44 @@
 
 ## React
 
-- [x] [Render and Commit](https://react.dev/learn/render-and-commit)
+- [Render and Commit](https://react.dev/learn/render-and-commit)
   > 组件渲染流程
-- [x] [Rendering Lists](https://react.dev/learn/rendering-lists#rules-of-keys)
+- [Rendering Lists](https://react.dev/learn/rendering-lists#rules-of-keys)
 - **组件 key 的作用及应用场景**
-  - [x] [Keeping list items in order with key](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
-  - [x] [Resetting state with a key](https://react.dev/reference/react/useState#resetting-state-with-a-key)
-  - [x] [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state)
-- [x] [useState](https://react.dev/reference/react/useState#storing-information-from-previous-renders)
-  - [x] [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates)
+  - [Keeping list items in order with key](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
+  - [Resetting state with a key](https://react.dev/reference/react/useState#resetting-state-with-a-key)
+  - [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state)
+- [useState](https://react.dev/reference/react/useState#storing-information-from-previous-renders)
+  - [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates)
     > Batch Update 原理
-  - [ ] [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect)
+  - [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect)
     > setState 直接在 render 函数中使用的应用场景
-- [x] [useRef](https://react.dev/reference/react/useRef)
-  - [x] [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs#differences-between-refs-and-state)
+- [useRef](https://react.dev/reference/react/useRef)
+  - [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs#differences-between-refs-and-state)
 
 ## Bundlers
 
-- [x] [Webpack and Rollup: the same but different](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c)
-  - [x] [[译] 同中有异的 Webpack 与 Rollup](https://juejin.cn/post/6844903473700405261)
-- [x] [webpack、gulp、rollup、tsc/babel 使用对比](https://segmentfault.com/a/1190000037638760)
-  - [ ] [用 rollup + gulp 造个轮子，别说还挺香](https://juejin.cn/post/7081998643657605127#heading-7)
-  - [ ] [antd-tools: gulp + tsc/babel 打包组件](https://github.com/ant-design/antd-tools/blob/master/lib/gulpfile.js)
+- [Webpack and Rollup: the same but different](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c)
+  - [[译] 同中有异的 Webpack 与 Rollup](https://juejin.cn/post/6844903473700405261)
+- [webpack、gulp、rollup、tsc/babel 使用对比](https://segmentfault.com/a/1190000037638760)
+  - [用 rollup + gulp 造个轮子，别说还挺香](https://juejin.cn/post/7081998643657605127#heading-7)
+  - [antd-tools: gulp + tsc/babel 打包组件](https://github.com/ant-design/antd-tools/blob/master/lib/gulpfile.js)
 
 ## 开发
 
-- [ ] [为什么说 90% 的前端不会调试 Ant Design 源码？](https://juejin.cn/post/7158430758070140942)
+- [为什么说 90% 的前端不会调试 Ant Design 源码？](https://juejin.cn/post/7158430758070140942)
 
 - **受控组件与非受控组件**
-  - [ ] [一次手写Antd Form的经历，让我受益匪浅](https://juejin.cn/post/7038099720400535582)
-  - [ ] [React受控&非受控组件——我想都要！](https://juejin.cn/post/7051855761588092958)
+  - [一次手写Antd Form的经历，让我受益匪浅](https://juejin.cn/post/7038099720400535582)
+  - [React受控&非受控组件——我想都要！](https://juejin.cn/post/7051855761588092958)
 
 ## Github
 
-- [x] [.gitignore template](https://github.com/github/gitignore/blob/main/Node.gitignore)
+- [.gitignore template](https://github.com/github/gitignore/blob/main/Node.gitignore)
 - **新建 ssh key 并链接到 github 仓库:**
-  - [x] [生成新的 SSH 密钥并将其添加到 ssh-agent](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  - [x] [新增 SSH 密钥到 GitHub 帐户](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+  - [生成新的 SSH 密钥并将其添加到 ssh-agent](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  - [新增 SSH 密钥到 GitHub 帐户](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+## node.js
+
+- [nvm: node 版本管理](https://juejin.cn/post/7000652162950758431#heading-6)
