@@ -2,6 +2,10 @@
 
 ## 🔥 官方文档
 
+- [next.js](https://nextjs.org/)
+  - using app router
+  - using pages router
+- [react](https://react.dev/)
 - [RxJS](https://rxjs.dev/)
 - [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发`
 - [Rollup](https://rollupjs.org/)
@@ -45,10 +49,10 @@
 - [React 组件库 CSS 样式方案分析](https://juejin.cn/post/7097100515535765534#heading-7)
 - [immer.js:也许更适合你的immutable js库](https://juejin.cn/post/6844904111402385422#heading-4)
 - [JavaScript 新特性最全指南：ES2023 ～ ES2016](https://www.51cto.com/article/745333.html)
-
-## 课程资料推荐
-
-- [【Udemy高分付费课程】Next.js 和 React - 完整开发指南 学习并使用Next.js搭建全栈应用程序（中英文字幕）](https://www.bilibili.com/video/BV1G54y1o7RP/?spm_id_from=333.337.search-card.all.click)
+- ⭐️ [从 React 源码彻底搞懂 Ref 的全部 api](https://juejin.cn/post/7166224289383841823)
+  > 包含 react 渲染流程的解读以及 react 对于 ref 的处理
+  
+- [放弃 console.log 吧！用 Debugger 你能读懂各种源码](https://juejin.cn/post/7175468840476737592)
 
 ## 🧐 待读...
 
