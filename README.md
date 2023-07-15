@@ -1,15 +1,16 @@
 # mind-palace
 
-## 🔥 官方文档
+## 🔥 官方文档/开发手册
 
-- [next.js](https://nextjs.org/)
-  - using app router
-  - using pages router
-- [react](https://react.dev/)
+- [next.js](https://nextjs.org/) `The react framework for the full-stack web applications`
+- [react](https://react.dev/) `The library for web and native user interfaces`
 - [RxJS](https://rxjs.dev/)
-- [Storybook](https://storybook.js.org/docs/react/get-started/install) `辅助UI控件独立开发`
-- [Rollup](https://rollupjs.org/)
-- [Lodash](https://www.lodashjs.com/)
+- [storybook](https://storybook.js.org/docs/react/get-started/install)
+- [rollup](https://rollupjs.org/) 
+- [lodash](https://www.lodashjs.com/)
+- [babel-handbook](https://github.com/jamiebuilds/babel-handbook) `babel配置/开发手册`
+- [zustand](https://zustand-demo.pmnd.rs/) `轻量状态管库`
+
 - **MDN**
   - [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - **Webpack**
@@ -53,6 +54,7 @@
   > 包含 react 渲染流程的解读以及 react 对于 ref 的处理
 - [放弃 console.log 吧！用 Debugger 你能读懂各种源码](https://juejin.cn/post/7175468840476737592)
 - [芜湖，埋点还可以这么做？这也太简单了](https://juejin.cn/post/7238431954126929981)
+- [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230714230518FA761ED397686E738AC1)
 
 ## 🧐 待读...
 
