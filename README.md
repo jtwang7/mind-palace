@@ -6,13 +6,14 @@
 - [react](https://react.dev/) `The library for web and native user interfaces`
 - [RxJS](https://rxjs.dev/)
 - [storybook](https://storybook.js.org/docs/react/get-started/install)
-- [rollup](https://rollupjs.org/) 
+- [rollup](https://rollupjs.org/)
 - [lodash](https://www.lodashjs.com/)
 - [babel-handbook](https://github.com/jamiebuilds/babel-handbook) `babel配置/开发手册`
-- [zustand](https://zustand-demo.pmnd.rs/) `轻量状态管库`
+- [zustand](https://zustand-demo.pmnd.rs/) `轻量状态管理库`
+- [redux](https://redux.js.org/) `状态管理库`
+- [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+- [tailwindcss](https://tailwindcss.com/) `CSS framework packed with classes`
 
-- **MDN**
-  - [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
@@ -26,7 +27,7 @@
   - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
   
-## ✨ 第三方库推荐
+## ✨ 工具推荐
 
 - [highlits.js](https://highlightjs.org/usage/) `代码高亮`
 - [classnames](https://github.com/JedWatson/classnames) `高效组合className的通用库`
@@ -37,6 +38,8 @@
 - [RPG-Awesome](http://nagoshiashumari.github.io/Rpg-Awesome/) `科幻主题的免费矢量图标网站`
 - [Lorem Picsum](https://picsum.photos/) `图片占位`
 - [fuse.js](https://fusejs.io/) `模糊检索`
+- [MongoDB Atlas](https://cloud.mongodb.com/) `MongoDB云端服务`
+
 - **color**
   - [AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
   - [hex-rgb](https://www.npmjs.com/package/hex-rgb) `format: hex <=> rgb`
