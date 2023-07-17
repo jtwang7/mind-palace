@@ -14,6 +14,7 @@
 - [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - [tailwindcss](https://tailwindcss.com/) `CSS framework packed with classes`
 - [Material Design](https://mui.com/core/) `UI 库`
+- [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) `js代码简洁之道`
 
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
