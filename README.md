@@ -16,7 +16,7 @@
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) `js代码简洁之道`
 - **MDN**
   - [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-  - [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+  - [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) `特点(mutable): 修改源对象本身，不产生新的对象`
 
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
