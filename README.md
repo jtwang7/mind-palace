@@ -11,10 +11,12 @@
 - [babel-handbook](https://github.com/jamiebuilds/babel-handbook) `babel配置/开发手册`
 - [zustand](https://zustand-demo.pmnd.rs/) `轻量状态管理库`
 - [redux](https://redux.js.org/) `状态管理库`
-- [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - [tailwindcss](https://tailwindcss.com/) `CSS framework packed with classes`
 - [Material Design](https://mui.com/core/) `UI 库`
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) `js代码简洁之道`
+- **MDN**
+  - [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
@@ -60,6 +62,13 @@
 - [放弃 console.log 吧！用 Debugger 你能读懂各种源码](https://juejin.cn/post/7175468840476737592)
 - [芜湖，埋点还可以这么做？这也太简单了](https://juejin.cn/post/7238431954126929981)
 - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230714230518FA761ED397686E738AC1)
+- [前端代码质量-圈复杂度原理和实践](https://juejin.cn/post/6844903965792927751?searchId=2023071711184810BC8B8315785EDC6672#heading-16)
+- [npm 命令行工具开发指南](https://juejin.cn/post/6956027274919411726)
+- **编程范式相关**
+  - [FP, RP, FRP… What the F…](https://medium.com/@emadalam/fp-rp-frp-what-the-f-71c4949c29d) `理解 FP/RP/FRP 三种编程范式`
+  - [Object Oriented Programing in Javascript](https://dev.to/bhaveshdaswani93/object-oriented-programing-in-javascript-3bp0) `OOP 面向对象`
+  - [Functional Programming in javascript](https://dev.to/bhaveshdaswani93/functional-programming-in-javascript-59e2) `FP 面向函数`
+  - [OOP vs FP with Javascript](https://dev.to/bhaveshdaswani93/oop-vs-fp-with-javascript-39jf) `两者区别以及如何选择合适的编程范式`
 
 ## 🧐 待读...
 
