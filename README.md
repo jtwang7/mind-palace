@@ -3,6 +3,7 @@
 ## 🔥 官方文档/开发手册
 
 - [next.js](https://nextjs.org/) `The react framework for the full-stack web applications`
+- [nest.js](https://nestjs.com/) `A progressive Node.js framework for building server-side applications.`
 - [react](https://react.dev/) `The library for web and native user interfaces`
 - [RxJS](https://rxjs.dev/)
 - [storybook](https://storybook.js.org/docs/react/get-started/install)
