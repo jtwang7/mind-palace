@@ -65,6 +65,7 @@
 - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230714230518FA761ED397686E738AC1)
 - [前端代码质量-圈复杂度原理和实践](https://juejin.cn/post/6844903965792927751?searchId=2023071711184810BC8B8315785EDC6672#heading-16)
 - [npm 命令行工具开发指南](https://juejin.cn/post/6956027274919411726)
+- [使用process.env.NODE_ENV的正确姿势](https://juejin.cn/post/7070347341282148365)
 - **编程范式相关**
   - [FP, RP, FRP… What the F…](https://medium.com/@emadalam/fp-rp-frp-what-the-f-71c4949c29d) `理解 FP/RP/FRP 三种编程范式`
   - [Object Oriented Programing in Javascript](https://dev.to/bhaveshdaswani93/object-oriented-programing-in-javascript-3bp0) `OOP 面向对象`
