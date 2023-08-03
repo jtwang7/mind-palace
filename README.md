@@ -80,3 +80,16 @@
 - [ ] [如何写出更优雅的 React 组件 - 设计思维篇](https://www.51cto.com/article/695041.html)
 - [ ] [使用gulp打包js/scss/less/font文件](https://www.cnblogs.com/smart-elwin/p/15920646.html)
 - [ ] [全网最简单的React Hooks源码解析！](https://cloud.tencent.com/developer/article/1977982)
+
+## 近期汇总
+
+- [git放弃本地文件修改](https://blog.csdn.net/hou_ge/article/details/109223233)
+- [child_process.execSync(command[, options])](https://nodejs.org/api/child_process.html#child_processexecsynccommand-options)
+- [【git操作】远程强制覆盖本地代码](https://blog.csdn.net/qq_26834611/article/details/107041969?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-5-107041969-blog-109673933.235%5Ev38%5Epc_relevant_anti_vip_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-5-107041969-blog-109673933.235%5Ev38%5Epc_relevant_anti_vip_base&utm_relevant_index=10)
+- [【git】远程仓强制覆盖本地仓](https://blog.csdn.net/qq_41996454/article/details/109673933)
+- [Commander.js](https://github.com/tj/commander.js/blob/master/Readme_zh-CN.md#%e5%a3%b0%e6%98%8e-program-%e5%8f%98%e9%87%8f)
+- [Node 文件查找的优先级以及 Require 方法的文件查找策略](https://juejin.cn/post/7146953567398526983?searchId=202308022315098101C83875D1FEE7E8FA)
+- [pnpm --filter ./<glob>, --filter {<glob>}](https://pnpm.io/zh/next/filtering#--filter-glob---filter-glob)
+- [package.json bin](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#bin)
+- [使用软链 npm link](https://juejin.cn/post/6844904030620090382)
+- [VSCode 调试中 launch.json 配置不完全指南](https://www.barretlee.com/blog/2019/03/18/debugging-in-vscode-tutorial/)
