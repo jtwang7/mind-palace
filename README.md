@@ -95,6 +95,7 @@
 - [VSCode 调试中 launch.json 配置不完全指南](https://www.barretlee.com/blog/2019/03/18/debugging-in-vscode-tutorial/)
 - [linux shell:find命令批量删除文件夹或文件夹](https://cloud.tencent.com/developer/article/1910113)
 - [Git删除本地分支（批量删除）](https://juejin.cn/post/6844903610124337159)
+- [Git 操作——如何删除本地分支和远程分支](https://www.freecodecamp.org/chinese/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
 - [前端工程化之强大的glob语法](https://juejin.cn/post/6876363718578405384?searchId=20230806235202B73B84D87400188F6936#heading-3)
 - [node的路径解析require.resolve](https://juejin.cn/post/6844904055806885895)
 - [Node.js path.relative() Method](https://www.geeksforgeeks.org/node-js-path-relative-method/)
