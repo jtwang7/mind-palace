@@ -103,3 +103,5 @@
 - [fs.access(path[, mode], callback)](https://nodejs.org/api/fs.html#fsaccesspath-mode-callback)
 - [process.argv](https://nodejs.cn/api/process/process_argv.html)
 - [npm 命令行工具开发指南](https://juejin.cn/post/6956027274919411726)
+- [简单认识 Shell ｜ 青训营笔记](https://juejin.cn/post/7222996508319678521?searchId=20230808154043D1CB566E35AC3AA0F8EB#heading-26)
+
