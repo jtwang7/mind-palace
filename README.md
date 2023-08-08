@@ -104,4 +104,7 @@
 - [process.argv](https://nodejs.cn/api/process/process_argv.html)
 - [npm 命令行工具开发指南](https://juejin.cn/post/6956027274919411726)
 - [简单认识 Shell ｜ 青训营笔记](https://juejin.cn/post/7222996508319678521?searchId=20230808154043D1CB566E35AC3AA0F8EB#heading-26)
+- [nodejs writefilesync no such file or directory
+](https://juejin.cn/s/nodejs%20writefilesync%20no%20such%20file%20or%20directory)
+- [如何在Nodejs中检查文件/路径是否存在？](https://juejin.cn/post/7118951152875470879)
 
