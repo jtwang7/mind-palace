@@ -110,6 +110,7 @@
 - [Shell和JavaScript相互调用，以及相互传参](https://www.jianshu.com/p/a49e48ddc14e)
 - [NodeJS获取命令行后面的参数](https://cloud.tencent.com/developer/article/1650297)
 - [【shell学习笔记】shell变量、参数传递($)、脚本执行方法](https://blog.51cto.com/u_3826358/3921088)
-- []()
+- [js字符串 “true“和 “false“转换为boolean 类型](https://blog.csdn.net/ljh101/article/details/109750382)
+  > `JSON.parse()` 解析普通字符串(非"true"/"false")会报错，因此还需要包裹一层 `try...catch` 判断并处理错误(赋予默认值)
 - []()
 - []()
