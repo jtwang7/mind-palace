@@ -107,4 +107,9 @@
 - [nodejs writefilesync no such file or directory
 ](https://juejin.cn/s/nodejs%20writefilesync%20no%20such%20file%20or%20directory)
 - [如何在Nodejs中检查文件/路径是否存在？](https://juejin.cn/post/7118951152875470879)
-
+- [Shell和JavaScript相互调用，以及相互传参](https://www.jianshu.com/p/a49e48ddc14e)
+- [NodeJS获取命令行后面的参数](https://cloud.tencent.com/developer/article/1650297)
+- [【shell学习笔记】shell变量、参数传递($)、脚本执行方法](https://blog.51cto.com/u_3826358/3921088)
+- []()
+- []()
+- []()
