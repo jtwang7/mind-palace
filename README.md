@@ -126,4 +126,4 @@
   - [TypeScript AST Viewer](https://ts-ast-viewer.com/#code/GYVwdgxgLglg9mAFASgAQG8C+Q)
   - [TypeScript Compiler API 使用简介](https://juejin.cn/post/6844904177286512653?searchId=202308151927213AFBF7C4F06C75D4CE29)
   - [Add comment before function using TypeScript Compiler API](https://stackoverflow.com/questions/50008676/add-comment-before-function-using-typescript-compiler-api)
-  - [TypeScript Compiler API loses formatting during transformation](https://stackoverflow.com/questions/53500087/typescript-compiler-api-loses-formatting-during-transformation)
+  - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
