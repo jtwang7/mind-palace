@@ -125,8 +125,11 @@
   - [Using the Compiler API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)
   - [TypeScript AST Viewer](https://ts-ast-viewer.com/#code/GYVwdgxgLglg9mAFASgAQG8C+Q)
   - [TypeScript Compiler API 使用简介](https://juejin.cn/post/6844904177286512653?searchId=202308151927213AFBF7C4F06C75D4CE29)
+  - **tsc丢失源代码格式解决方案:**
   - [Add comment before function using TypeScript Compiler API](https://stackoverflow.com/questions/50008676/add-comment-before-function-using-typescript-compiler-api)
   - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
+  - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
+  - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
 - **Babel Compiler**
   - [babel-handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/README.md)
   - @babel/*
