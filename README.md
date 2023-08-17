@@ -127,3 +127,15 @@
   - [TypeScript Compiler API 使用简介](https://juejin.cn/post/6844904177286512653?searchId=202308151927213AFBF7C4F06C75D4CE29)
   - [Add comment before function using TypeScript Compiler API](https://stackoverflow.com/questions/50008676/add-comment-before-function-using-typescript-compiler-api)
   - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
+- **Babel Compiler**
+  - [babel-handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/README.md)
+  - @babel/*
+    - [@babel/parser](https://www.babeljs.cn/docs/babel-parser)
+    - [@babel/core](https://www.babeljs.cn/docs/babel-core)
+    - [@babel/generator](https://www.babeljs.cn/docs/babel-generator)
+    - [@babel/traverse](https://www.babeljs.cn/docs/babel-traverse)
+    - [@babel/types](https://www.babeljs.cn/docs/babel-types)
+  - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230817093257469E7FACE40334DD5C21#heading-3)
+  - [AST in TypeScript 实践](https://cloud.tencent.com/developer/article/1452826)
+
+
