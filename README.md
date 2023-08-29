@@ -140,5 +140,16 @@
     - [@babel/types](https://www.babeljs.cn/docs/babel-types)
   - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230817093257469E7FACE40334DD5C21#heading-3)
   - [AST in TypeScript 实践](https://cloud.tencent.com/developer/article/1452826)
-
+  - [Babel 插件：30分钟从入门到实战](https://juejin.cn/post/7143859407703506957?searchId=2023081721432597680E774282B5310220)
+  - [带你玩转babel工具链（二）@babel/traverse](https://juejin.cn/post/7113800415057018894)
+- **redis**
+  - [ioredis: api](https://redis.github.io/ioredis/classes/Redis.html)
+  - [redis in nodejs](https://redis.io/docs/clients/nodejs/)
+  - [redis listen to expired](https://redis.io/docs/manual/keyspace-notifications/)
+  - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
+- **mock data**
+  - [MSW: Mock Service Worker](https://mswjs.io/)
+  - [Mock.js](http://mockjs.com/)
+  - [Apifox](https://apifox.com/)
+  - [5分钟教你用nodeJS手写一个mock数据服务器](https://juejin.cn/post/6844903937330380814?searchId=202308292238329598404EF59C7DE7A8BF)
 
