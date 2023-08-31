@@ -152,4 +152,9 @@
   - [Mock.js](http://mockjs.com/)
   - [Apifox](https://apifox.com/)
   - [5分钟教你用nodeJS手写一个mock数据服务器](https://juejin.cn/post/6844903937330380814?searchId=202308292238329598404EF59C7DE7A8BF)
-
+- **debug**
+  - [node-in-debugging](https://github.com/nswbmw/node-in-debugging)
+  - [前端开发调试最佳实践](https://juejin.cn/post/7055496557038141476)
+  - [Node.js 深度调试指南](https://juejin.cn/post/6844904199805730823)
+  - [Visual Studio Code 前端调试不完全指南](https://jerryzou.com/posts/vscode-debug-guide/)
+  - [Browser debugging in VS Code](https://code.visualstudio.com/docs/nodejs/browser-debugging)
