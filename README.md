@@ -41,6 +41,13 @@
     - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
     - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
     - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
+- node.js
+  - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
+  - [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
+- pm2
+  - [PM2 命令使用方法总结](https://juejin.cn/post/6889300755539312653)
+
+
 
 ## 🌈官方文档/开发手册
 
@@ -161,42 +168,4 @@
 - [前端代码插桩与覆盖率](https://juejin.cn/post/7022928631756226591#heading-74)
 - [2023 年的 React 生态](https://zhuanlan.zhihu.com/p/609351542)
 - [istanbul: Ignoring code for coverage purposes](https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md)
-- **TS Compiler**
-  - [Using the Compiler API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)
-  - [TypeScript AST Viewer](https://ts-ast-viewer.com/#code/GYVwdgxgLglg9mAFASgAQG8C+Q)
-  - [TypeScript Compiler API 使用简介](https://juejin.cn/post/6844904177286512653?searchId=202308151927213AFBF7C4F06C75D4CE29)
-  - **tsc丢失源代码格式解决方案:**
-  - [Add comment before function using TypeScript Compiler API](https://stackoverflow.com/questions/50008676/add-comment-before-function-using-typescript-compiler-api)
-  - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
-  - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
-  - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
-- **Babel Compiler**
-  - [babel-handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/README.md)
-  - @babel/*
-    - [@babel/parser](https://www.babeljs.cn/docs/babel-parser)
-    - [@babel/core](https://www.babeljs.cn/docs/babel-core)
-    - [@babel/generator](https://www.babeljs.cn/docs/babel-generator)
-    - [@babel/traverse](https://www.babeljs.cn/docs/babel-traverse)
-    - [@babel/types](https://www.babeljs.cn/docs/babel-types)
-  - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230817093257469E7FACE40334DD5C21#heading-3)
-  - [AST in TypeScript 实践](https://cloud.tencent.com/developer/article/1452826)
-  - [Babel 插件：30分钟从入门到实战](https://juejin.cn/post/7143859407703506957?searchId=2023081721432597680E774282B5310220)
-  - [带你玩转babel工具链（二）@babel/traverse](https://juejin.cn/post/7113800415057018894)
-- **redis**
-  - [ioredis: api](https://redis.github.io/ioredis/classes/Redis.html)
-  - [redis in nodejs](https://redis.io/docs/clients/nodejs/)
-  - [redis listen to expired](https://redis.io/docs/manual/keyspace-notifications/)
-  - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
-- **mock data**
-  - [MSW: Mock Service Worker](https://mswjs.io/)
-  - [Mock.js](http://mockjs.com/)
-  - [Apifox](https://apifox.com/)
-  - [5分钟教你用nodeJS手写一个mock数据服务器](https://juejin.cn/post/6844903937330380814?searchId=202308292238329598404EF59C7DE7A8BF)
-- **debug**
-  - [node-in-debugging](https://github.com/nswbmw/node-in-debugging)
-  - [前端开发调试最佳实践](https://juejin.cn/post/7055496557038141476)
-  - [Node.js 深度调试指南](https://juejin.cn/post/6844904199805730823)
-  - [Visual Studio Code 前端调试不完全指南](https://jerryzou.com/posts/vscode-debug-guide/)
-  - [Browser debugging in VS Code](https://code.visualstudio.com/docs/nodejs/browser-debugging)
-- **Dockerfile**
-  - [Docker - 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
+- [JS中的树形数据结构处理](https://juejin.cn/post/7123844106517741599?searchId=20230910003645B147D8F855AE4BE2233D#heading-14)
