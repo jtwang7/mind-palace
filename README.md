@@ -147,6 +147,8 @@
   - [redis in nodejs](https://redis.io/docs/clients/nodejs/)
   - [redis listen to expired](https://redis.io/docs/manual/keyspace-notifications/)
   - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
+  - [《我们一起进大厂》系列- Redis基础](https://juejin.cn/post/6844903982066827277?searchId=202309091305109CB73397A08D9F7209D1)
+  - [通俗易懂的Redis数据结构基础教程](https://juejin.cn/post/6844903644798664712?searchId=202309091305109CB73397A08D9F7209D1)
 - **mock data**
   - [MSW: Mock Service Worker](https://mswjs.io/)
   - [Mock.js](http://mockjs.com/)
@@ -160,3 +162,9 @@
   - [Browser debugging in VS Code](https://code.visualstudio.com/docs/nodejs/browser-debugging)
 - **Dockerfile**
   - [Docker - 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
+- [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
+- **NodeJS 定时任务**
+  - [node-schedule](https://www.npmjs.com/package/node-schedule)
+- **PM2**
+  - [PM2 命令使用方法总结](https://juejin.cn/post/6889300755539312653)
+- [JS中的树形数据结构处理](https://juejin.cn/post/7123844106517741599?searchId=20230910003645B147D8F855AE4BE2233D#heading-14)
