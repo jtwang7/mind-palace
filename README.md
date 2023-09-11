@@ -64,9 +64,10 @@
 - [tailwindcss](https://tailwindcss.com/) `CSS framework packed with classes`
 - [Material Design](https://mui.com/core/) `UI 库`
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) `js代码简洁之道`
-- **MDN**
+- MDN
   - [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
   - [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) `特点(mutable): 修改源对象本身，不产生新的对象`
+  - [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
@@ -151,8 +152,7 @@
 - [process.argv](https://nodejs.cn/api/process/process_argv.html)
 - [npm 命令行工具开发指南](https://juejin.cn/post/6956027274919411726)
 - [简单认识 Shell ｜ 青训营笔记](https://juejin.cn/post/7222996508319678521?searchId=20230808154043D1CB566E35AC3AA0F8EB#heading-26)
-- [nodejs writefilesync no such file or directory
-](https://juejin.cn/s/nodejs%20writefilesync%20no%20such%20file%20or%20directory)
+- [nodejs writefilesync no such file or directory](https://juejin.cn/s/nodejs%20writefilesync%20no%20such%20file%20or%20directory)
 - [如何在Nodejs中检查文件/路径是否存在？](https://juejin.cn/post/7118951152875470879)
 - [Shell和JavaScript相互调用，以及相互传参](https://www.jianshu.com/p/a49e48ddc14e)
 - [NodeJS获取命令行后面的参数](https://cloud.tencent.com/developer/article/1650297)
@@ -160,7 +160,6 @@
 - [js字符串 “true“和 “false“转换为boolean 类型](https://blog.csdn.net/ljh101/article/details/109750382)
   > `JSON.parse()` 解析普通字符串(非"true"/"false")会报错，因此还需要包裹一层 `try...catch` 判断并处理错误(赋予默认值)
 - [JS正则表达式完整教程（略长）](https://juejin.cn/post/6844903487155732494?searchId=20230813003546B3A40DF9B54398F8059D)
-- [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 - [js-regex-mini-book](https://github.com/qdlaoyao/js-regex-mini-book)
 - [Web Worker 使用教程](https://www.ruanyifeng.com/blog/2018/07/web-worker.html)
 - [vim编辑器-多行注释的添加与删除](https://juejin.cn/post/7034327406869643295?searchId=20230814220133CDF9D5CAAC1D9431F764)
