@@ -41,6 +41,13 @@
     - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
     - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
     - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
+- node.js
+  - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
+  - [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
+- pm2
+  - [PM2 命令使用方法总结](https://juejin.cn/post/6889300755539312653)
+
+
 
 ## 🌈官方文档/开发手册
 
@@ -161,3 +168,4 @@
 - [前端代码插桩与覆盖率](https://juejin.cn/post/7022928631756226591#heading-74)
 - [2023 年的 React 生态](https://zhuanlan.zhihu.com/p/609351542)
 - [istanbul: Ignoring code for coverage purposes](https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md)
+- [JS中的树形数据结构处理](https://juejin.cn/post/7123844106517741599?searchId=20230910003645B147D8F855AE4BE2233D#heading-14)
