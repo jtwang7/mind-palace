@@ -1,6 +1,48 @@
-# mind-palace
+# wiki
 
-## 🔥 官方文档/开发手册
+## 🌀知识积累
+
+- redis
+  - [ioredis: api](https://redis.github.io/ioredis/classes/Redis.html)
+  - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
+  - [redis in nodejs](https://redis.io/docs/clients/nodejs/)
+  - [redis listen to expired](https://redis.io/docs/manual/keyspace-notifications/)
+- data mock
+  - [MSW: Mock Service Worker](https://mswjs.io/)
+  - [Mock.js](http://mockjs.com/)
+  - [Apifox](https://apifox.com/)
+  - [5分钟教你用nodeJS手写一个mock数据服务器](https://juejin.cn/post/6844903937330380814?searchId=202308292238329598404EF59C7DE7A8BF)
+- debug
+  - [node-in-debugging](https://github.com/nswbmw/node-in-debugging)
+  - [前端开发调试最佳实践](https://juejin.cn/post/7055496557038141476)
+  - [Node.js 深度调试指南](https://juejin.cn/post/6844904199805730823)
+  - [Visual Studio Code 前端调试不完全指南](https://jerryzou.com/posts/vscode-debug-guide/)
+  - [Browser debugging in VS Code](https://code.visualstudio.com/docs/nodejs/browser-debugging)
+- docker
+  - [Docker - 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
+- babel compiler
+  - [babel-handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/README.md)
+  - @babel/*
+    - [@babel/parser](https://www.babeljs.cn/docs/babel-parser)
+    - [@babel/core](https://www.babeljs.cn/docs/babel-core)
+    - [@babel/generator](https://www.babeljs.cn/docs/babel-generator)
+    - [@babel/traverse](https://www.babeljs.cn/docs/babel-traverse)
+    - [@babel/types](https://www.babeljs.cn/docs/babel-types)
+  - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230817093257469E7FACE40334DD5C21#heading-3)
+  - [AST in TypeScript 实践](https://cloud.tencent.com/developer/article/1452826)
+  - [Babel 插件：30分钟从入门到实战](https://juejin.cn/post/7143859407703506957?searchId=2023081721432597680E774282B5310220)
+  - [带你玩转babel工具链（二）@babel/traverse](https://juejin.cn/post/7113800415057018894)
+- ts compiler
+  - [Using the Compiler API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)
+  - [TypeScript AST Viewer](https://ts-ast-viewer.com/#code/GYVwdgxgLglg9mAFASgAQG8C+Q)
+  - [TypeScript Compiler API 使用简介](https://juejin.cn/post/6844904177286512653?searchId=202308151927213AFBF7C4F06C75D4CE29)
+  - tsc丢失源代码格式解决方案
+    - [Add comment before function using TypeScript Compiler API](https://stackoverflow.com/questions/50008676/add-comment-before-function-using-typescript-compiler-api)
+    - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
+    - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
+    - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
+
+## 🌈官方文档/开发手册
 
 - [next.js](https://nextjs.org/) `The react framework for the full-stack web applications`
 - [nest.js](https://nestjs.com/) `A progressive Node.js framework for building server-side applications.`
@@ -18,7 +60,6 @@
 - **MDN**
   - [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
   - [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) `特点(mutable): 修改源对象本身，不产生新的对象`
-
 - **Webpack**
   - [webpack plugins](https://webpack.js.org/plugins/)
   - [webpack documentation](https://webpack.js.org/concepts/)
@@ -32,7 +73,7 @@
   - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
   
-## ✨ 工具推荐
+## ✨工具推荐
 
 - [highlits.js](https://highlightjs.org/usage/) `代码高亮`
 - [classnames](https://github.com/JedWatson/classnames) `高效组合className的通用库`
@@ -44,14 +85,13 @@
 - [Lorem Picsum](https://picsum.photos/) `图片占位`
 - [fuse.js](https://fusejs.io/) `模糊检索`
 - [MongoDB Atlas](https://cloud.mongodb.com/) `MongoDB云端服务`
-
 - **color**
   - [AntD调色板](https://www.npmjs.com/package/@ant-design/colors)
   - [hex-rgb](https://www.npmjs.com/package/hex-rgb) `format: hex <=> rgb`
   - [colormap](https://github.com/bpostlethwaite/colormap) `生成连续过渡色数组`
   - [react-color](https://github.com/casesandberg/react-color) `react颜色选择器`
   
-## 🚀 好文推荐
+## 🚀好文推荐
 
 - [如何阅读大型前端开源项目的源码](https://juejin.cn/post/6844903607393845255)
 - [全新的 React 组件设计理念 Headless UI](https://juejin.cn/post/7160223720236122125)
@@ -121,42 +161,3 @@
 - [前端代码插桩与覆盖率](https://juejin.cn/post/7022928631756226591#heading-74)
 - [2023 年的 React 生态](https://zhuanlan.zhihu.com/p/609351542)
 - [istanbul: Ignoring code for coverage purposes](https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md)
-- **TS Compiler**
-  - [Using the Compiler API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API)
-  - [TypeScript AST Viewer](https://ts-ast-viewer.com/#code/GYVwdgxgLglg9mAFASgAQG8C+Q)
-  - [TypeScript Compiler API 使用简介](https://juejin.cn/post/6844904177286512653?searchId=202308151927213AFBF7C4F06C75D4CE29)
-  - **tsc丢失源代码格式解决方案:**
-  - [Add comment before function using TypeScript Compiler API](https://stackoverflow.com/questions/50008676/add-comment-before-function-using-typescript-compiler-api)
-  - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
-  - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
-  - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
-- **Babel Compiler**
-  - [babel-handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/README.md)
-  - @babel/*
-    - [@babel/parser](https://www.babeljs.cn/docs/babel-parser)
-    - [@babel/core](https://www.babeljs.cn/docs/babel-core)
-    - [@babel/generator](https://www.babeljs.cn/docs/babel-generator)
-    - [@babel/traverse](https://www.babeljs.cn/docs/babel-traverse)
-    - [@babel/types](https://www.babeljs.cn/docs/babel-types)
-  - [深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576?searchId=20230817093257469E7FACE40334DD5C21#heading-3)
-  - [AST in TypeScript 实践](https://cloud.tencent.com/developer/article/1452826)
-  - [Babel 插件：30分钟从入门到实战](https://juejin.cn/post/7143859407703506957?searchId=2023081721432597680E774282B5310220)
-  - [带你玩转babel工具链（二）@babel/traverse](https://juejin.cn/post/7113800415057018894)
-- **redis**
-  - [ioredis: api](https://redis.github.io/ioredis/classes/Redis.html)
-  - [redis in nodejs](https://redis.io/docs/clients/nodejs/)
-  - [redis listen to expired](https://redis.io/docs/manual/keyspace-notifications/)
-  - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
-- **mock data**
-  - [MSW: Mock Service Worker](https://mswjs.io/)
-  - [Mock.js](http://mockjs.com/)
-  - [Apifox](https://apifox.com/)
-  - [5分钟教你用nodeJS手写一个mock数据服务器](https://juejin.cn/post/6844903937330380814?searchId=202308292238329598404EF59C7DE7A8BF)
-- **debug**
-  - [node-in-debugging](https://github.com/nswbmw/node-in-debugging)
-  - [前端开发调试最佳实践](https://juejin.cn/post/7055496557038141476)
-  - [Node.js 深度调试指南](https://juejin.cn/post/6844904199805730823)
-  - [Visual Studio Code 前端调试不完全指南](https://jerryzou.com/posts/vscode-debug-guide/)
-  - [Browser debugging in VS Code](https://code.visualstudio.com/docs/nodejs/browser-debugging)
-- **Dockerfile**
-  - [Docker - 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
