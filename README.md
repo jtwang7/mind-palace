@@ -168,3 +168,4 @@
 - [2023 年的 React 生态](https://zhuanlan.zhihu.com/p/609351542)
 - [istanbul: Ignoring code for coverage purposes](https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md)
 - [JS中的树形数据结构处理](https://juejin.cn/post/7123844106517741599?searchId=20230910003645B147D8F855AE4BE2233D#heading-14)
+- [Session 、Cookie和Token三者的关系和区别](https://wuch886.gitbooks.io/front-end-handbook/content/session-cookiehe-token-san-zhe-de-guan-xi-he-qu-bie.html)
