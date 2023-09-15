@@ -46,6 +46,14 @@
   - [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
 - pm2
   - [PM2 命令使用方法总结](https://juejin.cn/post/6889300755539312653)
+- vscode
+  - [vscode卡顿相关:How can I disable GPU rendering in Visual Studio Code](https://stackoverflow.com/questions/29966747/how-can-i-disable-gpu-rendering-in-visual-studio-code)
+  - 插件
+    - Power Mode
+    - Prettier - Code formatter
+    - vscode-styled-components
+    - Path Intellisense
+    - Better Comments
 
 
 
