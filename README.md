@@ -7,6 +7,9 @@
   - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
   - [redis in nodejs](https://redis.io/docs/clients/nodejs/)
   - [redis listen to expired](https://redis.io/docs/manual/keyspace-notifications/)
+  - 分布式锁
+    - [redis: redlock](https://redis.com/glossary/redlock/)
+    - [node-redlock](https://github.com/mike-marcacci/node-redlock)
 - data mock
   - [MSW: Mock Service Worker](https://mswjs.io/)
   - [Mock.js](http://mockjs.com/)
@@ -45,6 +48,7 @@
   - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
   - [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
   - [url](https://nodejs.org/api/url.html#the-whatwg-url-api)
+  - [Sleep in NodeJS](https://masteringjs.io/tutorials/node/sleep)
 - pm2
   - [PM2 命令使用方法总结](https://juejin.cn/post/6889300755539312653)
 - vscode
@@ -178,3 +182,4 @@
 - [istanbul: Ignoring code for coverage purposes](https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md)
 - [JS中的树形数据结构处理](https://juejin.cn/post/7123844106517741599?searchId=20230910003645B147D8F855AE4BE2233D#heading-14)
 - [Session 、Cookie和Token三者的关系和区别](https://wuch886.gitbooks.io/front-end-handbook/content/session-cookiehe-token-san-zhe-de-guan-xi-he-qu-bie.html)
+- [为何try里面放return，finally还会执行，理解其内部机制](https://juejin.cn/post/6844904128276070413)
