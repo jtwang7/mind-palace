@@ -48,7 +48,12 @@
   - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
   - [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
   - [url](https://nodejs.org/api/url.html#the-whatwg-url-api)
-  - [Sleep in NodeJS](https://masteringjs.io/tutorials/node/sleep)
+  - sleep
+    - [Sleep in NodeJS](https://masteringjs.io/tutorials/node/sleep)
+    - [How to create a sleep/delay in nodejs that is Blocking?](https://stackoverflow.com/questions/20967006/how-to-create-a-sleep-delay-in-nodejs-that-is-blocking)
+  - retry
+    - [node-retry](https://github.com/tim-kos/node-retry)
+    - [async-retry](https://www.npmjs.com/package/async-retry)
 - pm2
   - [PM2 命令使用方法总结](https://juejin.cn/post/6889300755539312653)
 - vscode
@@ -77,6 +82,7 @@
 - [tailwindcss](https://tailwindcss.com/) `CSS framework packed with classes`
 - [Material Design](https://mui.com/core/) `UI 库`
 - [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) `js代码简洁之道`
+- [agenda](https://github.com/agenda/agenda) `A light-weight job scheduling library for Node.js`
 - MDN
   - [RegExp: Regular Expressions](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
   - [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) `特点(mutable): 修改源对象本身，不产生新的对象`
