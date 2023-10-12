@@ -194,3 +194,4 @@
 - [Session 、Cookie和Token三者的关系和区别](https://wuch886.gitbooks.io/front-end-handbook/content/session-cookiehe-token-san-zhe-de-guan-xi-he-qu-bie.html)
 - [为何try里面放return，finally还会执行，理解其内部机制](https://juejin.cn/post/6844904128276070413)
 - [A simple guide to JavaScript concurrency in Node.js and a few traps that come with it](https://tsh.io/blog/simple-guide-concurrency-node-js/)
+- [理解NodeJS多进程](https://juejin.cn/post/7152857274652835848)
