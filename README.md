@@ -45,7 +45,9 @@
     - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
     - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
 - node.js
-  - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
+  - 定时任务
+    - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
+    - [crontab guru](https://crontab.guru/#0_2_*_*_*)
   - [get TimerId in NodeJS.Timer](https://stackoverflow.com/questions/63801128/get-timer-id-in-node-js)
   - [url](https://nodejs.org/api/url.html#the-whatwg-url-api)
   - sleep
@@ -68,10 +70,12 @@
 ## 🌈官方文档/开发手册
 
 - [next.js](https://nextjs.org/) `The react framework for the full-stack web applications`
+  - [Fetching data on the Server with third-party libraries](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#fetching-data-on-the-server-with-third-party-libraries)
 - [nest.js](https://nestjs.com/) `A progressive Node.js framework for building server-side applications.`
 - react
   - [react](https://react.dev/)
   - [react: lazy](https://react.dev/reference/react/lazy)
+  - [cache](https://react.dev/reference/react/cache#cache)
 - [RxJS](https://rxjs.dev/)
 - [storybook](https://storybook.js.org/docs/react/get-started/install)
 - [rollup](https://rollupjs.org/)
@@ -189,3 +193,4 @@
 - [JS中的树形数据结构处理](https://juejin.cn/post/7123844106517741599?searchId=20230910003645B147D8F855AE4BE2233D#heading-14)
 - [Session 、Cookie和Token三者的关系和区别](https://wuch886.gitbooks.io/front-end-handbook/content/session-cookiehe-token-san-zhe-de-guan-xi-he-qu-bie.html)
 - [为何try里面放return，finally还会执行，理解其内部机制](https://juejin.cn/post/6844904128276070413)
+- [A simple guide to JavaScript concurrency in Node.js and a few traps that come with it](https://tsh.io/blog/simple-guide-concurrency-node-js/)
