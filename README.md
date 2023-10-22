@@ -195,3 +195,4 @@
 - [为何try里面放return，finally还会执行，理解其内部机制](https://juejin.cn/post/6844904128276070413)
 - [A simple guide to JavaScript concurrency in Node.js and a few traps that come with it](https://tsh.io/blog/simple-guide-concurrency-node-js/)
 - [理解NodeJS多进程](https://juejin.cn/post/7152857274652835848)
+- [听说你会Promise？ 那么如何控制请求并发数呢？](https://juejin.cn/post/7219961144584552504?searchId=20231021162001B11FF1E0640F5BDE2A14)
