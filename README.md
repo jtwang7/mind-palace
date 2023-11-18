@@ -202,3 +202,5 @@
 - [devdocs](https://devdocs.io/)
 - [透过现象看本质: 常见的前端架构风格和案例](https://juejin.cn/post/6844903943068205064?searchId=20231115145350B0BE1C8C0746EA98757A)
 - [深入解析前端常用的中间件机制](https://juejin.cn/post/7291135064838782991?searchId=20231115145350B0BE1C8C0746EA98757A)
+- [Decorator 装饰器: 编译时运行](http://shouce.jb51.net/es6/decorator.html)
+- [都2020年了，你还不会JavaScript 装饰器？](https://github.com/yinguangyao/blog/issues/34)
