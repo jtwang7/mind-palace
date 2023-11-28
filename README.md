@@ -103,6 +103,7 @@
   - [imports](https://nodejs.org/api/packages.html#imports)
   - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
+- [typegoose](https://typegoose.github.io/typegoose/) `Define Mongoose models using TypeScript classes`
   
 ## ✨工具推荐
 
