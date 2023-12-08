@@ -2,6 +2,8 @@
 
 ## 🌀知识积累
 
+- [令人极度舒适的 Node.js 包和资源列表【防造轮子神器】](https://zhuanlan.zhihu.com/p/385852664)
+
 - redis
   - [ioredis: api](https://redis.github.io/ioredis/classes/Redis.html)
   - [ioredis 监听缓存过期](https://cloud.tencent.com/developer/article/1685674)
