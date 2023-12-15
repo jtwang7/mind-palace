@@ -106,6 +106,7 @@
   - [types/typings](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package)
 - [tsconfig.json 字段](https://www.typescriptlang.org/tsconfig)
 - [typegoose](https://typegoose.github.io/typegoose/) `Define Mongoose models using TypeScript classes`
+- [Puppeteer](https://pptr.dev/) `Nodejs api for chrome by DevTools`
   
 ## ✨工具推荐
 
@@ -154,6 +155,10 @@
 - [ ] [如何写出更优雅的 React 组件 - 设计思维篇](https://www.51cto.com/article/695041.html)
 - [ ] [使用gulp打包js/scss/less/font文件](https://www.cnblogs.com/smart-elwin/p/15920646.html)
 - [ ] [全网最简单的React Hooks源码解析！](https://cloud.tencent.com/developer/article/1977982)
+
+## 实用好物
+
+- [火山翻译](https://translate.volcengine.com/api)
 
 ## 近期汇总
 
