@@ -46,6 +46,7 @@
     - [TypeScript AST transformation removes all blank lines](https://stackoverflow.com/questions/51353988/typescript-ast-transformation-removes-all-blank-lines)
     - [tsc api: Scanner](https://basarat.gitbook.io/typescript/overview/scanner)
     - [TypeScript-Compiler-Notes: Scanner](https://github.com/microsoft/TypeScript-Compiler-Notes/blob/main/codebase/src/compiler/scanner.md#scanner)
+  - [@typescript-eslint/typescript-estree: typescript解析工具](https://typescript-eslint.io/packages/typescript-estree/)
 - node.js
   - 定时任务
     - [node-schedule](https://www.npmjs.com/package/node-schedule) `定时任务`
